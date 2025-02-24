@@ -46,7 +46,7 @@ export const ContactForm = () => {
           </label>
           <Textarea id="message" name="message" required />
         </div>
-        <Button type="submit" className="w-full" disabled={pending}>
+        <Button type="submit" className="w-full bg-gradient-to-r from-[#00467F] to-[#00bf8f] font-bold text-white" disabled={pending}>
           {pending ? "Sending..." : "Send Message"}
         </Button>
         {message && (

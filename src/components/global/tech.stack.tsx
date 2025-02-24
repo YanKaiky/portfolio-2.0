@@ -2,27 +2,54 @@ import { Card } from "@/components/ui/card";
 
 const technologies = [
   {
-    category: "Frontend",
+    category: "Front-end",
     skills: [
       "React",
+      "Vite",
       "Next.js",
       "TypeScript",
       "TailwindCSS",
       "Redux",
       "GraphQL",
+      "Filament PHP",
     ],
   },
   {
-    category: "Backend",
-    skills: ["Node.js", "Express", "Python", "Django", "PostgreSQL", "MongoDB"],
+    category: "Back-end",
+    skills: [
+      "Node.js",
+      "Express",
+      "Nest.js",
+      "Adonis.js",
+      "PHP",
+      "Java",
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+    ],
+  },
+  {
+    category: "Mobile",
+    skills: ["Flutter", "React Native", "Expo"],
   },
   {
     category: "DevOps",
-    skills: ["Docker", "AWS", "CI/CD", "Git", "Linux", "Nginx"],
+    skills: ["Docker", "AWS", "DigitalOcean", "CI/CD", "Git", "Linux", "Nginx"],
   },
   {
     category: "Tools",
-    skills: ["VS Code", "Postman", "Figma", "Jest", "GitHub", "Vercel"],
+    skills: [
+      "VS Code",
+      "IntelliJ IDEA",
+      "Postman",
+      "Figma",
+      "Jest",
+      "GitHub",
+      "GitLab",
+      "BitBucket",
+      "Vercel",
+      "Netlify",
+    ],
   },
 ];
 
