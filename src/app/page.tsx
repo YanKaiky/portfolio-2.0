@@ -1,6 +1,8 @@
 import { ContactForm } from "@/components/global/contact.form";
 import { ProjectCard } from "@/components/global/project.card";
 import { TechStack } from "@/components/global/tech.stack";
+import { ThemeToggle } from "@/components/global/theme.toggle";
+import TranslateButton from "@/components/global/translate";
 import { Button } from "@/components/ui/button";
 import { Email } from "@/icons/email";
 import GitHub from "@/icons/github";
@@ -8,6 +10,7 @@ import { Instagram } from "@/icons/instagram";
 import { LinkedIn } from "@/icons/linkedin";
 import { WhatsApp } from "@/icons/whatsapp";
 import { X } from "@/icons/x";
+import { FileUser } from "lucide-react";
 import Link from "next/link";
 
 export default function Page() {
@@ -15,9 +18,16 @@ export default function Page() {
     <div className="min-h-screen bg-background">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="px-4 md:px-6 flex h-14 items-center justify-between">
-          <Link className="mr-6 flex items-center space-x-2" href="/">
-            <span className="hidden font-bold sm:inline-block">Yan Kaiky</span>
-          </Link>
+          <div className="flex spca-x-4">
+            <Link className="mr-6 flex items-center space-x-2" href="/">
+              <span className="hidden font-bold sm:inline-block">
+                Yan Kaiky
+              </span>
+            </Link>
+
+            <ThemeToggle />
+            <TranslateButton />
+          </div>
 
           <nav className="flex items-center space-x-9 text-sm font-medium">
             <Link
@@ -40,7 +50,12 @@ export default function Page() {
             </Link>
           </nav>
 
-          <Button variant="outline">Resume</Button>
+          <a href="/CV.pdf" download="Yan Kaiky Augusto dos Santos.pdf">
+            <Button variant="outline">
+              Resume
+              <FileUser />
+            </Button>
+          </a>
         </div>
       </header>
 
@@ -139,9 +154,9 @@ export default function Page() {
             </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <ProjectCard
-                title="E-commerce Platform"
+                title="Bistro Café"
                 description="A full-stack e-commerce platform built with Next.js, Prisma, and Stripe integration."
-                image="/gramhub.png"
+                image="/bistro-café.png"
                 link="https://github.com"
                 tags={["Next.js", "Prisma", "Stripe"]}
               />
@@ -153,7 +168,7 @@ export default function Page() {
                 tags={["React", "Node.js", "Socket.io"]}
               />
               <ProjectCard
-                title="AI Chat Interface"
+                title="GramHub AI"
                 description="An AI-powered chat interface with natural language processing capabilities."
                 image="/gramhub.png"
                 link="https://github.com"
@@ -185,24 +200,10 @@ export default function Page() {
       </main>
 
       <footer className="border-t">
-        <div className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6">
-          <p className="text-xs text-gray-500 dark:text-gray-400">
-            © 2024 John.dev. All rights reserved.
+        <div className="gap-2 py-6 w-full shrink-0 px-4 md:px-6">
+          <p className="text-center text-xs text-gray-500 dark:text-gray-400">
+            {`© ${new Date().getFullYear()} Yan Kaiky. All rights reserved.`}
           </p>
-          <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-            <Link
-              className="text-xs hover:underline underline-offset-4"
-              href="#"
-            >
-              Terms of Service
-            </Link>
-            <Link
-              className="text-xs hover:underline underline-offset-4"
-              href="#"
-            >
-              Privacy
-            </Link>
-          </nav>
         </div>
       </footer>
     </div>
