@@ -1,5 +1,6 @@
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Github } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
@@ -19,6 +20,8 @@ export const ProjectCard: FC<ProjectCardProps> = ({
   link,
   tags,
 }) => {
+  const t = useTranslations("projectCard");
+
   return (
     <Card className="overflow-hidden rounded-2xl">
       <div className="relative aspect-video">
@@ -50,7 +53,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
           className="inline-flex items-center gap-2 text-sm hover:underline"
         >
           <Github className="h-4 w-4" />
-          View on GitHub
+          {t("view")}
         </Link>
       </CardFooter>
     </Card>

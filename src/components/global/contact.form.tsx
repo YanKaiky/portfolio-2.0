@@ -4,10 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { submitContactForm } from "../../app/actions";
 
 export const ContactForm = () => {
+  const t = useTranslations("contactForm");
+
   const [pending, setPending] = useState(false);
   const [message, setMessage] = useState("");
 
@@ -30,7 +33,7 @@ export const ContactForm = () => {
       <form action={handleSubmit} className="space-y-4">
         <div>
           <label htmlFor="name" className="block text-sm font-medium mb-2">
-            Name
+            {t("name")}
           </label>
           <Input id="name" name="name" required />
         </div>
@@ -42,11 +45,15 @@ export const ContactForm = () => {
         </div>
         <div>
           <label htmlFor="message" className="block text-sm font-medium mb-2">
-            Message
+            {t("message")}
           </label>
           <Textarea id="message" name="message" required />
         </div>
-        <Button type="submit" className="w-full bg-gradient-to-r from-[#00467F] to-[#00bf8f] font-bold text-white" disabled={pending}>
+        <Button
+          type="submit"
+          className="w-full bg-gradient-to-r from-[#00467F] to-[#00bf8f] font-bold text-white"
+          disabled={pending}
+        >
           {pending ? "Sending..." : "Send Message"}
         </Button>
         {message && (

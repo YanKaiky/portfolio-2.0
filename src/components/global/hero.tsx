@@ -4,11 +4,14 @@ import { Instagram } from "@/icons/instagram";
 import { LinkedIn } from "@/icons/linkedin";
 import { WhatsApp } from "@/icons/whatsapp";
 import { X } from "@/icons/x";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { FC } from "react";
 import { Button } from "../ui/button";
 
 const Hero: FC = () => {
+  const t = useTranslations("hero");
+
   return (
     <section
       id="hero"
@@ -21,8 +24,7 @@ const Hero: FC = () => {
           </h1>
 
           <p className="text-gray-400 text-xl mb-8 max-w-2xl mx-auto">
-            Building digital experiences with modern technologies. Focused on
-            creating elegant solutions to complex problems.
+            {t("description")}
           </p>
         </div>
       </div>

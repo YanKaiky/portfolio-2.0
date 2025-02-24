@@ -1,1 +1,32 @@
-{}
+{
+  "navbar": {
+    "projects": "Projects",
+    "stack": "Stack",
+    "contact": "Contact",
+    "resume": "Resume"
+  },
+  "hero": {
+    "description": "Building digital experiences with modern technologies. Focused on creating elegant solutions to complex problems."
+  },
+  "projects": {
+    "title": "Projects",
+    "firstProject": "A full-stack e-commerce platform built with Next.js, Prisma, and Stripe integration.",
+    "secondProject": "A real-time task management application with team collaboration features.",
+    "thirdProject": "An AI-powered chat interface with natural language processing capabilities."
+  },
+  "projectCard": {
+    "view": "View on GitHub"
+  },
+  "stack": {
+    "title": "Tech Stack"
+  },
+  "contact": {
+    "title": "Get in Touch"
+  },
+  "contactForm": {
+    "name": "Name",
+    "message": "Message",
+    "sending": "Sending...",
+    "send": "Send Message"
+  }
+}
