@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import emailjs from "@emailjs/browser";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
-import { submitContactForm } from "../../app/actions";
+import { FormEvent, useRef, useState } from "react";
 
 export const ContactForm = () => {
   const t = useTranslations("contactForm");
@@ -14,23 +14,27 @@ export const ContactForm = () => {
   const [pending, setPending] = useState(false);
   const [message, setMessage] = useState("");
 
-  async function handleSubmit(formData: FormData) {
-    setPending(true);
-    try {
-      const response = await submitContactForm(formData);
-      setMessage(response.message);
-    } catch (error) {
-      console.error(error);
+  const formRef = useRef<string | HTMLFormElement>("");
 
-      setMessage("Something went wrong. Please try again.");
-    } finally {
-      setPending(false);
-    }
-  }
+  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    setPending(true);
+
+    emailjs
+      .sendForm("service_aod43ld", "template_5avcxqz", formRef.current, {
+        publicKey: "ui-ePk4xUVZc_aCRt",
+      })
+      .then(
+        () => setMessage("Message sent"),
+        () => setMessage("Something went wrong. Please try again.")
+      )
+      .finally(() => setPending(false));
+  };
 
   return (
     <Card className="p-6 rounded-2xl">
-      <form action={handleSubmit} className="space-y-4">
+      <form ref={formRef as never} onSubmit={sendEmail} className="space-y-4">
         <div>
           <label htmlFor="name" className="block text-sm font-medium mb-2">
             {t("name")}
@@ -44,7 +48,13 @@ export const ContactForm = () => {
             E-mail
           </label>
 
-          <Input id="email" name="email" placeholder="hello@example.com" type="email" required />
+          <Input
+            id="email"
+            name="email"
+            placeholder="hello@example.com"
+            type="email"
+            required
+          />
         </div>
 
         <div>
@@ -62,6 +72,7 @@ export const ContactForm = () => {
         >
           {pending ? t("sending") : t("send")}
         </Button>
+
         {message && (
           <p className="text-sm text-center mt-4 text-muted-foreground">
             {message}
