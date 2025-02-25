@@ -12,7 +12,7 @@ export const YanKaikyDev: FC<IYanKaikyDevProps> = ({ size = "md" }) => {
       <span
         className={cn(
           size === "sm" ? "text-xs" : "text-2xl",
-          "hidden text-transparent bg-clip-text bg-gradient-to-r from-[#185a9d] to-[#43cea2] font-bold sm:inline-block"
+          "hidden font-bold text-gradient sm:inline-block"
         )}
       >
         yankaiky.dev

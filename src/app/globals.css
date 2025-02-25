@@ -93,7 +93,7 @@
 
 @layer utilities {
   .bg-container-gradient {
-    @apply bg-gradient-to-r from-[#00467F] to-[#00bf8f];
+    @apply bg-gradient-to-r from-[#2193b0] to-[#6dd5ed];
   }
   .text-gradient {
     @apply text-transparent bg-clip-text bg-container-gradient;

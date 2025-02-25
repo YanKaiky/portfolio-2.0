@@ -42,7 +42,7 @@ export const Hero = () => {
         <Button
           size="lg"
           variant="outline"
-          className="border-[#00467F] hover:bg-[#00467F]/20"
+          className="border-[#6dd5ed] hover:bg-[#6dd5ed]/20"
         >
           <Link href="#contact" className="flex items-center space-x-2">
             {t("contact")}
