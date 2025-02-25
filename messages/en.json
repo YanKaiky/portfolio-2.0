@@ -28,5 +28,8 @@
     "message": "Message",
     "sending": "Sending...",
     "send": "Send Message"
+  },
+  "footer": {
+    "allRightsReserved": "All rights reserved"
   }
 }

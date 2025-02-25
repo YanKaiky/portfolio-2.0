@@ -35,26 +35,32 @@ export const ContactForm = () => {
           <label htmlFor="name" className="block text-sm font-medium mb-2">
             {t("name")}
           </label>
-          <Input id="name" name="name" required />
+
+          <Input id="name" name="name" placeholder="Yan Kaiky" required />
         </div>
+
         <div>
           <label htmlFor="email" className="block text-sm font-medium mb-2">
-            Email
+            E-mail
           </label>
-          <Input id="email" name="email" type="email" required />
+
+          <Input id="email" name="email" placeholder="hello@example.com" type="email" required />
         </div>
+
         <div>
           <label htmlFor="message" className="block text-sm font-medium mb-2">
             {t("message")}
           </label>
-          <Textarea id="message" name="message" required />
+
+          <Textarea id="message" name="message" rows={4} required />
         </div>
+
         <Button
           type="submit"
           className="w-full bg-gradient-to-r from-[#00467F] to-[#00bf8f] font-bold text-white"
           disabled={pending}
         >
-          {pending ? "Sending..." : "Send Message"}
+          {pending ? t("sending") : t("send")}
         </Button>
         {message && (
           <p className="text-sm text-center mt-4 text-muted-foreground">
