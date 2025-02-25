@@ -1,8 +1,9 @@
+"use client";
+
 import { useTranslations } from "next-intl";
-import { FC } from "react";
 import { ProjectCard } from "./project.card";
 
-const Projects: FC = () => {
+export const Projects = () => {
   const t = useTranslations("projects");
 
   return (
@@ -38,5 +39,3 @@ const Projects: FC = () => {
     </section>
   );
 };
-
-export default Projects;

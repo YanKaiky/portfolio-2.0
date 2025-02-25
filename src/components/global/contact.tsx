@@ -1,8 +1,9 @@
+"use client";
+
 import { useTranslations } from "next-intl";
-import { FC } from "react";
 import { ContactForm } from "./contact.form";
 
-const Contact: FC = () => {
+export const Contact = () => {
   const t = useTranslations("contact");
 
   return (
@@ -18,5 +19,3 @@ const Contact: FC = () => {
     </section>
   );
 };
-
-export default Contact;

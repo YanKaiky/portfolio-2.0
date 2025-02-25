@@ -1,6 +1,6 @@
-import { FC } from "react";
+"use client";
 
-const Footer: FC = () => {
+export const Footer = () => {
   return (
     <footer className="border-t">
       <div className="gap-2 py-6 w-full shrink-0 px-4 md:px-6">
@@ -11,5 +11,3 @@ const Footer: FC = () => {
     </footer>
   );
 };
-
-export default Footer;

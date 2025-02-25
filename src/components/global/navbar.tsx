@@ -1,12 +1,13 @@
+"use client";
+
 import { FileUser } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { FC } from "react";
 import { Button } from "../ui/button";
 import { ThemeToggle } from "./theme.toggle";
-import TranslateButton from "./translate";
+import { TranslateButton } from "./translate";
 
-const Navbar: FC = () => {
+export const Navbar = () => {
   const t = useTranslations("navbar");
 
   return (
@@ -57,5 +58,3 @@ const Navbar: FC = () => {
     </header>
   );
 };
-
-export default Navbar;

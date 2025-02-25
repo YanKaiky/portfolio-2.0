@@ -12,7 +12,7 @@ import { useLocale } from "@/hooks/use-locale";
 import { BrazilFlag } from "@/icons/brazil-flag";
 import { USFlag } from "@/icons/us-flag";
 
-const TranslateButton = () => {
+export const TranslateButton = () => {
   const { locale, setLocale } = useLocale();
 
   return (
@@ -40,5 +40,3 @@ const TranslateButton = () => {
     </Select>
   );
 };
-
-export default TranslateButton;

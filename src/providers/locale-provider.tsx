@@ -1,7 +1,7 @@
 "use client";
 
 import { NextIntlClientProvider } from "next-intl";
-import { ReactNode, createContext, useEffect, useState } from "react";
+import { FC, ReactNode, createContext, useEffect, useState } from "react";
 
 type LocaleContextType = {
   locale: string;
@@ -12,7 +12,11 @@ export const LocaleContext = createContext<LocaleContextType | undefined>(
   undefined
 );
 
-export function LocaleProvider({ children }: { children: ReactNode }) {
+type ILocaleProviderProps = {
+  children: ReactNode;
+};
+
+export const LocaleProvider: FC<ILocaleProviderProps> = ({ children }) => {
   const localLocale =
     typeof window !== "undefined"
       ? localStorage.getItem("locale") ?? "pt-BR"
@@ -23,10 +27,15 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const loadMessages = async () => {
-      localStorage.setItem("locale", locale);
+      try {
+        localStorage.setItem("locale", locale);
 
-      const newMessages = await import(`../../messages/${locale}.json`);
-      setMessages(newMessages.default);
+        const newMessages = (await import(`../../messages/${locale}.json`))
+          .default;
+        setMessages(newMessages);
+      } catch (error) {
+        console.error("Erro ao carregar mensagens de tradução:", error);
+      }
     };
 
     loadMessages();
@@ -41,4 +50,4 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
       )}
     </LocaleContext.Provider>
   );
-}
+};

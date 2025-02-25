@@ -1,3 +1,5 @@
+"use client";
+
 import { Email } from "@/icons/email";
 import GitHub from "@/icons/github";
 import { Instagram } from "@/icons/instagram";
@@ -6,10 +8,9 @@ import { WhatsApp } from "@/icons/whatsapp";
 import { X } from "@/icons/x";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { FC } from "react";
 import { Button } from "../ui/button";
 
-const Hero: FC = () => {
+export const Hero = () => {
   const t = useTranslations("hero");
 
   return (
@@ -73,5 +74,3 @@ const Hero: FC = () => {
     </section>
   );
 };
-
-export default Hero;

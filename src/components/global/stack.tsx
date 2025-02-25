@@ -1,8 +1,9 @@
+"use client";
+
 import { useTranslations } from "next-intl";
-import { FC } from "react";
 import { TechStack } from "./tech.stack";
 
-const Stack: FC = () => {
+export const Stack = () => {
   const t = useTranslations("stack");
 
   return (
@@ -16,5 +17,3 @@ const Stack: FC = () => {
     </section>
   );
 };
-
-export default Stack;
