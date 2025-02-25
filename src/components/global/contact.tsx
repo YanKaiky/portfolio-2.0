@@ -13,9 +13,7 @@ export const Contact = () => {
     >
       <div className="px-4 md:px-6">
         <div className="mx-auto max-w-2xl">
-          <h2 className="text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#00467F] to-[#00bf8f] font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">
-            {t("title")}
-          </h2>
+          <h2 className="container-title">{t("title")}</h2>
 
           <ContactForm />
         </div>

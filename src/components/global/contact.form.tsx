@@ -67,7 +67,7 @@ export const ContactForm = () => {
 
         <Button
           type="submit"
-          className="w-full bg-gradient-to-r from-[#00467F] to-[#00bf8f] font-bold text-white"
+          className="w-full bg-container-gradient font-bold text-white"
           disabled={pending}
         >
           {pending ? t("sending") : t("send")}

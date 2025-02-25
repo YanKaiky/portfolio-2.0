@@ -91,6 +91,18 @@
   }
 }
 
+@layer utilities {
+  .bg-container-gradient {
+    @apply bg-gradient-to-r from-[#00467F] to-[#00bf8f];
+  }
+  .text-gradient {
+    @apply text-transparent bg-clip-text bg-container-gradient;
+  }
+  .container-title {
+    @apply text-3xl font-bold text-gradient tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center;
+  }
+}
+
 .backdrop--blur__safari {
   -webkit-backdrop-filter: blur(5px);
 }

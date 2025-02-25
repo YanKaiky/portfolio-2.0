@@ -2,9 +2,9 @@
 
 import { FileUser } from "lucide-react";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 import { Button } from "../ui/button";
 import { SocialMedias } from "./social.medias";
-import Link from "next/link";
 
 export const Hero = () => {
   const t = useTranslations("hero");
@@ -16,7 +16,7 @@ export const Hero = () => {
     >
       <div className="mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#00467F] to-[#00bf8f] mb-6">
+          <h1 className="text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-container-gradient mb-6">
             Full Stack & Mobile Developer
           </h1>
 
@@ -29,8 +29,11 @@ export const Hero = () => {
       <SocialMedias />
 
       <div className="mx-auto px-6 space-x-4">
-        <a href="/Yan Kaiky Augusto dos Santos.pdf" download="Yan Kaiky Augusto dos Santos.pdf">
-          <Button className="text-white bg-gradient-to-r from-[#00467F] to-[#00bf8f]">
+        <a
+          href="/Yan Kaiky Augusto dos Santos.pdf"
+          download="Yan Kaiky Augusto dos Santos.pdf"
+        >
+          <Button className="text-white bg-container-gradient">
             {t("resume")}
             <FileUser />
           </Button>

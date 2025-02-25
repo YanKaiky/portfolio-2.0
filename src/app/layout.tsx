@@ -1,8 +1,9 @@
+import { Spinner } from "@/components/global/spinner";
 import { LocaleProvider } from "@/providers/locale-provider";
 import { ThemeProvider } from "@/providers/theme-provider";
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
-import { ReactNode } from "react";
+import { ReactNode, Suspense } from "react";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"] });
@@ -22,7 +23,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           enableSystem
           disableTransitionOnChange
         >
-          <LocaleProvider>{children}</LocaleProvider>
+          <Suspense fallback={<Spinner />}>
+            <LocaleProvider>{children}</LocaleProvider>
+          </Suspense>
         </ThemeProvider>
       </body>
     </html>
