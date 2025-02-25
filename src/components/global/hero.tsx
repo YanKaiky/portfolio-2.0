@@ -1,14 +1,10 @@
 "use client";
 
-import { Email } from "@/icons/email";
-import GitHub from "@/icons/github";
-import { Instagram } from "@/icons/instagram";
-import { LinkedIn } from "@/icons/linkedin";
-import { WhatsApp } from "@/icons/whatsapp";
-import { X } from "@/icons/x";
+import { FileUser } from "lucide-react";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 import { Button } from "../ui/button";
+import { SocialMedias } from "./social.medias";
+import Link from "next/link";
 
 export const Hero = () => {
   const t = useTranslations("hero");
@@ -30,46 +26,25 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div className="space-x-4">
-        <Link href="https://www.linkedin.com/in/yankaiky/" target="_blank">
-          <Button variant="outline" size="icon" className="rounded-full">
-            <LinkedIn />
-            <span className="sr-only">LinkedIn</span>
+      <SocialMedias />
+
+      <div className="mx-auto px-6 space-x-4">
+        <a href="/Yan Kaiky Augusto dos Santos.pdf" download="Yan Kaiky Augusto dos Santos.pdf">
+          <Button className="text-white bg-gradient-to-r from-[#00467F] to-[#00bf8f]">
+            {t("resume")}
+            <FileUser />
           </Button>
-        </Link>
-        <Link href="https://github.com/YanKaiky" target="_blank">
-          <Button variant="outline" size="icon" className="rounded-full">
-            <GitHub />
-            <span className="sr-only">GitHub</span>
-          </Button>
-        </Link>
-        <Link href="https://x.com/yankaiky_" target="_blank">
-          <Button variant="outline" size="icon" className="rounded-full">
-            <X />
-            <span className="sr-only">X</span>
-          </Button>
-        </Link>
-        <Link
-          href="https://wa.me/5547999556723?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços."
-          target="_blank"
+        </a>
+
+        <Button
+          size="lg"
+          variant="outline"
+          className="border-[#00467F] hover:bg-[#00467F]/20"
         >
-          <Button variant="outline" size="icon" className="rounded-full">
-            <WhatsApp />
-            <span className="sr-only">WhatsApp</span>
-          </Button>
-        </Link>
-        <Link href="https://www.instagram.com/yan.kaiky_" target="_blank">
-          <Button variant="outline" size="icon" className="rounded-full">
-            <Instagram />
-            <span className="sr-only">Instagram</span>
-          </Button>
-        </Link>
-        <Link href="mailto:yankaikys@gmail.com" target="_blank">
-          <Button variant="outline" size="icon" className="rounded-full">
-            <Email />
-            <span className="sr-only">Email</span>
-          </Button>
-        </Link>
+          <Link href="#contact" className="flex items-center space-x-2">
+            {t("contact")}
+          </Link>
+        </Button>
       </div>
     </section>
   );

@@ -2,11 +2,12 @@
   "navbar": {
     "projects": "Projects",
     "stack": "Stack",
-    "contact": "Contact",
-    "resume": "Resume"
+    "contact": "Contact"
   },
   "hero": {
-    "description": "Building digital experiences with modern technologies. Focused on creating elegant solutions to complex problems."
+    "description": "Building digital experiences with modern technologies. Focused on creating elegant solutions to complex problems.",
+    "resume": "Resume",
+    "contact": "Contact"
   },
   "projects": {
     "title": "Projects",

@@ -2,11 +2,12 @@
   "navbar": {
     "projects": "Projetos",
     "stack": "Tecnologias",
-    "contact": "Contato",
-    "resume": "Currículo"
+    "contact": "Contato"
   },
   "hero": {
-    "description": "Construindo experiências digitais com tecnologias modernas. Focado em criar soluções elegantes para problemas complexos."
+    "description": "Construindo experiências digitais com tecnologias modernas. Focado em criar soluções elegantes para problemas complexos.",
+    "resume": "Currículo",
+    "contact": "Contato"
   },
   "projects": {
     "title": "Projetos",

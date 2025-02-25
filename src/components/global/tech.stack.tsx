@@ -29,10 +29,6 @@ const technologies = [
     ],
   },
   {
-    category: "Mobile",
-    skills: ["Flutter", "React Native", "Expo"],
-  },
-  {
     category: "DevOps",
     skills: ["Docker", "AWS", "DigitalOcean", "CI/CD", "Git", "Linux", "Nginx"],
   },
