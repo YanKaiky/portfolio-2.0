@@ -18,21 +18,21 @@ export const Projects = () => {
             title="Bistro Café"
             description={t("firstProject")}
             image="/bistro-café.png"
-            link="https://github.com"
+            link="https://menuplacerestaurant.netlify.app"
+            github="https://github.com/YanKaiky/restaurant-website"
             tags={["Next.js", "Prisma", "Stripe"]}
           />
           <ProjectCard
             title="Financé"
             description={t("secondProject")}
             image="/financé.png"
-            link="https://github.com"
             tags={["React", "Node.js", "React Native", "Socket.io"]}
           />
           <ProjectCard
-            title="GramHub AI"
+            title="GramHub"
             description={t("thirdProject")}
             image="/gramhub.png"
-            link="https://github.com"
+            github="https://github.com/YanKaiky/gramhub"
             tags={["OpenAI", "Next.js", "TailwindCSS"]}
           />
         </div>
