@@ -10,7 +10,7 @@ export const Footer = () => {
   return (
     <footer className="border-t">
       <div className="flex items-center justify-center w-full shrink-0 md:justify-between py-2 md:px-6">
-        <YanKaikyDev size="sm" />
+        <SocialMedias />
 
         <p className="text-xs text-gray-500 dark:text-gray-400">
           {`© ${new Date().getFullYear()} Yan Kaiky. ${t(
@@ -18,7 +18,7 @@ export const Footer = () => {
           )}.`}
         </p>
 
-        <SocialMedias />
+        <YanKaikyDev size="sm" />
       </div>
     </footer>
   );

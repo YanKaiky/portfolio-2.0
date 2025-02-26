@@ -1,8 +1,8 @@
 "use client";
 
-import { Cpu } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { ContactForm } from "./contact.form";
+import { CpuAnimation } from "./cpu.animation";
 
 export const Contact = () => {
   const t = useTranslations("contact");
@@ -16,9 +16,9 @@ export const Contact = () => {
         <div className="mx-auto">
           <h2 className="container-title">{t("title")}</h2>
 
-          <div className="w-full flex justify-evenly items-center">
-            <div className="w-[50%] flex justify-center items-center">
-              <Cpu className="text-[#6dd5ed] md:text-[#2193b0]" size={400} />
+          <div className="w-full md:flex md:justify-evenly md:items-center">
+            <div className="hidden md:flex md:w-[50%] md:justify-center md:items-center">
+              <CpuAnimation />
             </div>
 
             <ContactForm />
