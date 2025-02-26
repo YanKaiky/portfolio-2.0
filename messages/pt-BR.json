@@ -1,0 +1,36 @@
+{
+  "navbar": {
+    "projects": "Projetos",
+    "stack": "Tecnologias",
+    "contact": "Contato"
+  },
+  "hero": {
+    "description": "Construindo experiências digitais com tecnologias modernas. Focado em criar soluções elegantes para problemas complexos.",
+    "resume": "Currículo",
+    "contact": "Contato"
+  },
+  "projects": {
+    "title": "Projetos",
+    "firstProject": "Uma plataforma de e-commerce full-stack construída com Next.js, Prisma e integração com Stripe.",
+    "secondProject": "Um aplicativo de gerenciamento de tarefas em tempo real com recursos de colaboração em equipe.",
+    "thirdProject": "Uma interface de chat com IA, equipada com processamento de linguagem natural."
+  },
+  "projectCard": {
+    "view": "Ver no GitHub"
+  },
+  "stack": {
+    "title": "Tecnologias"
+  },
+  "contact": {
+    "title": "Entre em Contato"
+  },
+  "contactForm": {
+    "name": "Nome",
+    "message": "Mensagem",
+    "sending": "Enviando...",
+    "send": "Enviar Mensagem"
+  },
+  "footer": {
+    "allRightsReserved": "Todos os direitos reservados"
+  }
+}
