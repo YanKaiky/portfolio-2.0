@@ -111,7 +111,14 @@
 * {
   scrollbar-width: thin; /* none | auto  */
   scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
+
+section {
+  scroll-snap-align: center;
+}
+
 /* Firefox */
 
 /* Chrome, Edge, Safari */

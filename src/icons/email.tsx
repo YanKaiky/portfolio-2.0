@@ -1,9 +1,15 @@
-export const Email = () => {
+import { FC } from "react";
+
+type IEmailProps = {
+  size?: "xs" | "sm";
+};
+
+export const Email: FC<IEmailProps> = ({ size = "sm" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="22"
-      height="22"
+      width={size === "sm" ? "22" : "16"}
+      height={size === "sm" ? "22" : "16"}
       viewBox="0 0 32 32"
       className="text-black dark:text-white"
     >

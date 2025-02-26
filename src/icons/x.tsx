@@ -1,11 +1,17 @@
-export const X = () => {
+import { FC } from "react";
+
+type IXProps = {
+  size?: "xs" | "sm";
+};
+
+export const X: FC<IXProps> = ({ size = "sm" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width="22"
-      height="22"
+      width={size === "sm" ? "22" : "16"}
+      height={size === "sm" ? "22" : "16"}
       viewBox="0 0 30 30"
       className="text-black dark:text-white"
     >

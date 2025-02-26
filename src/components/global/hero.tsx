@@ -30,7 +30,7 @@ export const Hero = () => {
           </div>
         </div>
 
-        <SocialMedias />
+        <SocialMedias hero />
 
         <div className="mx-auto px-6 space-x-4">
           <a

@@ -1,5 +1,5 @@
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Github } from "lucide-react";
+import { GitHub } from "@/icons";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
@@ -52,7 +52,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
           target="_blank"
           className="inline-flex items-center gap-2 text-sm hover:underline"
         >
-          <Github className="h-4 w-4" />
+          <GitHub />
           {t("view")}
         </Link>
       </CardFooter>

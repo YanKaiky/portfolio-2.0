@@ -1,9 +1,15 @@
-export const Instagram = () => {
+import { FC } from "react";
+
+type IInstagramProps = {
+  size?: "xs" | "sm";
+};
+
+export const Instagram: FC<IInstagramProps> = ({ size = "sm" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="22"
-      height="22"
+      width={size === "sm" ? "22" : "16"}
+      height={size === "sm" ? "22" : "16"}
       viewBox="0 0 1024 1024"
       version="1.1"
       className="text-black dark:text-white"

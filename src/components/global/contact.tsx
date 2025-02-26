@@ -9,7 +9,7 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-[calc(100vh-76px)] flex flex-col justify-center py-12 md:py-24 lg:py-32"
+      className="min-h-[calc(90vh-76px)] flex flex-col justify-center py-12 md:py-24 lg:py-32"
     >
       <div className="px-4 md:px-6">
         <div className="mx-auto max-w-2xl">

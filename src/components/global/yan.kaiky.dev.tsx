@@ -8,15 +8,14 @@ type IYanKaikyDevProps = {
 
 export const YanKaikyDev: FC<IYanKaikyDevProps> = ({ size = "md" }) => {
   return (
-    <Link className="flex items-center" href="#hero">
-      <span
-        className={cn(
-          size === "sm" ? "text-xs" : "text-2xl",
-          "hidden font-bold text-gradient sm:inline-block"
-        )}
-      >
-        yankaiky.dev
-      </span>
+    <Link
+      href="#hero"
+      className={cn(
+        size === "sm" ? "text-xs" : "text-2xl",
+        "hidden font-bold text-gradient sm:inline-block"
+      )}
+    >
+      yankaiky.dev
     </Link>
   );
 };

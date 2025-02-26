@@ -1,13 +1,17 @@
 import { FC } from "react";
 
-const GitHub: FC = () => {
+type IGitHubProps = {
+  size?: "xs" | "sm";
+};
+
+export const GitHub: FC<IGitHubProps> = ({ size = "sm" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width="100"
-      height="100"
+      width={size === "sm" ? "22" : "16"}
+      height={size === "sm" ? "22" : "16"}
       viewBox="0 0 24 24"
       className="text-black dark:text-white"
     >
@@ -18,5 +22,3 @@ const GitHub: FC = () => {
     </svg>
   );
 };
-
-export default GitHub;
