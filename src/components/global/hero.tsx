@@ -34,7 +34,7 @@ export const Hero = () => {
 
         <div className="mx-auto px-6 space-x-4">
           <a
-            href="/Yan Kaiky Augusto dos Santos.pdf"
+            href="/CV.pdf"
             download="Yan Kaiky Augusto dos Santos.pdf"
           >
             <Button className="text-white bg-container-gradient">
