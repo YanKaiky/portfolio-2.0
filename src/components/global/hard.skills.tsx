@@ -1,8 +1,10 @@
 import { Card } from "@/components/ui/card";
+import { Backend, DevOps, Frontend, Tools } from "@/icons";
 
 const technologies = [
   {
     category: "Front-end",
+    icon: <Frontend />,
     skills: [
       "React",
       "Vite",
@@ -11,11 +13,12 @@ const technologies = [
       "TailwindCSS",
       "Redux",
       "GraphQL",
-      "Filament PHP",
+      "Material UI",
     ],
   },
   {
     category: "Back-end",
+    icon: <Backend />,
     skills: [
       "Node.js",
       "Express",
@@ -30,15 +33,25 @@ const technologies = [
   },
   {
     category: "DevOps",
-    skills: ["Docker", "AWS", "DigitalOcean", "CI/CD", "Git", "Linux", "Nginx"],
+    icon: <DevOps />,
+    skills: [
+      "Docker",
+      "AWS",
+      "DigitalOcean",
+      "CI/CD",
+      "Git",
+      "Linux",
+      "Apache",
+      "Nginx",
+    ],
   },
   {
     category: "Tools",
+    icon: <Tools />,
     skills: [
       "VS Code",
       "IntelliJ IDEA",
       "Postman",
-      "Figma",
       "Jest",
       "GitHub",
       "GitLab",
@@ -49,12 +62,15 @@ const technologies = [
   },
 ];
 
-export const TechStack = () => {
+export const HardSkills = () => {
   return (
-    <div className="grid gap-6 md:grid-cols-2">
+    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {technologies.map((tech) => (
         <Card key={tech.category} className="p-6 rounded-2xl">
-          <h3 className="text-lg font-semibold mb-4">{tech.category}</h3>
+          <div className="flex items-center justify-start gap-6 mb-6">
+            <>{tech.icon}</>
+            <h3 className="text-2xl font-semibold">{tech.category}</h3>
+          </div>
           <div className="flex flex-wrap gap-2">
             {tech.skills.map((skill) => (
               <span

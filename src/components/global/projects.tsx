@@ -22,11 +22,11 @@ export const Projects = () => {
             tags={["Next.js", "Prisma", "Stripe"]}
           />
           <ProjectCard
-            title="Task Management App"
+            title="Financé"
             description={t("secondProject")}
-            image="/gramhub.png"
+            image="/financé.png"
             link="https://github.com"
-            tags={["React", "Node.js", "Socket.io"]}
+            tags={["React", "Node.js", "React Native", "Socket.io"]}
           />
           <ProjectCard
             title="GramHub AI"

@@ -33,52 +33,54 @@ export const ContactForm = () => {
   };
 
   return (
-    <Card className="p-6 rounded-2xl">
-      <form ref={formRef as never} onSubmit={sendEmail} className="space-y-4">
-        <div>
-          <label htmlFor="name" className="block text-sm font-medium mb-2">
-            {t("name")}
-          </label>
+    <div className="w-[40%]">
+      <Card className="p-6 rounded-2xl">
+        <form ref={formRef as never} onSubmit={sendEmail} className="space-y-4">
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium mb-2">
+              {t("name")}
+            </label>
 
-          <Input id="name" name="name" placeholder="Yan Kaiky" required />
-        </div>
+            <Input id="name" name="name" placeholder="Yan Kaiky" required />
+          </div>
 
-        <div>
-          <label htmlFor="email" className="block text-sm font-medium mb-2">
-            E-mail
-          </label>
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium mb-2">
+              E-mail
+            </label>
 
-          <Input
-            id="email"
-            name="email"
-            placeholder="hello@example.com"
-            type="email"
-            required
-          />
-        </div>
+            <Input
+              id="email"
+              name="email"
+              placeholder="hello@example.com"
+              type="email"
+              required
+            />
+          </div>
 
-        <div>
-          <label htmlFor="message" className="block text-sm font-medium mb-2">
-            {t("message")}
-          </label>
+          <div>
+            <label htmlFor="message" className="block text-sm font-medium mb-2">
+              {t("message")}
+            </label>
 
-          <Textarea id="message" name="message" rows={4} required />
-        </div>
+            <Textarea id="message" name="message" rows={4} required />
+          </div>
 
-        <Button
-          type="submit"
-          className="w-full bg-container-gradient font-bold text-white"
-          disabled={pending}
-        >
-          {pending ? t("sending") : t("send")}
-        </Button>
+          <Button
+            type="submit"
+            className="w-full bg-container-gradient font-bold text-white"
+            disabled={pending}
+          >
+            {pending ? t("sending") : t("send")}
+          </Button>
 
-        {message && (
-          <p className="text-sm text-center mt-4 text-muted-foreground">
-            {message}
-          </p>
-        )}
-      </form>
-    </Card>
+          {message && (
+            <p className="text-sm text-center mt-4 text-muted-foreground">
+              {message}
+            </p>
+          )}
+        </form>
+      </Card>
+    </div>
   );
 };

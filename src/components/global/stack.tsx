@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { TechStack } from "./tech.stack";
+import { HardSkills } from "./hard.skills";
 
 export const Stack = () => {
   const t = useTranslations("stack");
@@ -14,7 +14,7 @@ export const Stack = () => {
       <div className="px-4 md:px-6">
         <h2 className="container-title">{t("title")}</h2>
 
-        <TechStack />
+        <HardSkills />
       </div>
     </section>
   );
