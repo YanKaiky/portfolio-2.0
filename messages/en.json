@@ -11,12 +11,13 @@
   },
   "projects": {
     "title": "Projects",
-    "firstProject": "A full-stack e-commerce platform built with Next.js, Prisma, and Stripe integration.",
-    "secondProject": "A real-time task management application with team collaboration features.",
-    "thirdProject": "An AI-powered chat interface with natural language processing capabilities."
+    "firstProject": "A landing page for bistros that do not yet have a website and want to innovate their online presence.",
+    "secondProject": "A finance management app with team collaboration features.",
+    "thirdProject": "GramHub revolutionizes the way you connect with your audience on Instagram, turning interactions into valuable business opportunities."
   },
   "projectCard": {
-    "view": "View on GitHub"
+    "view": "Preview on web",
+    "gitHubView": "View on GitHub"
   },
   "stack": {
     "title": "Tech Stack"

@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Backend, DevOps, Frontend, Tools } from "@/icons";
+import { Backend, DevOps, Frontend, Mobile, Tools } from "@/icons";
 
 const technologies = [
   {
@@ -30,6 +30,11 @@ const technologies = [
       "MySQL",
       "MongoDB",
     ],
+  },
+  {
+    category: "Mobile",
+    icon: <Mobile />,
+    skills: ["Flutter", "React Native", "Expo"],
   },
   {
     category: "DevOps",
