@@ -83,7 +83,7 @@ export const RainingLetters: React.FC = () => {
       {characters.map((char, index) => (
         <span
           key={index}
-          className={`absolute text-xs transition-colors duration-100 ${
+          className={`hidden md:inline-block absolute text-xs transition-colors duration-100 ${
             activeIndices.has(index)
               ? "text-[#00ff00] text-base scale-125 z-10 font-bold animate-pulse"
               : "text-slate-600 font-light"
