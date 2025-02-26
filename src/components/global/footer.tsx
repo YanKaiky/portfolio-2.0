@@ -18,7 +18,9 @@ export const Footer = () => {
           )}.`}
         </p>
 
-        <YanKaikyDev size="sm" />
+        <div className="hidden md:inline-block">
+          <YanKaikyDev size="sm" />
+        </div>
       </div>
     </footer>
   );
