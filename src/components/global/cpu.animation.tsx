@@ -19,7 +19,7 @@ export const CpuAnimation = () => {
       >
         <div className="relative">
           <motion.div
-            className="absolute -inset-4 bg-[#6dd5ed]/35 dark:bg-[#6dd5ed]/5 rounded-full blur-xl"
+            className="absolute -inset-4 bg-[#2F80ED]/35 dark:bg-[#2F80ED]/5 rounded-full blur-xl"
             animate={{
               scale: [1, 1.2, 1],
               opacity: [0.5, 0.8, 0.5],
@@ -31,7 +31,7 @@ export const CpuAnimation = () => {
             }}
           />
 
-          <Cpu className="text-[#2193b0] dark:text-[#6dd5ed] w-60 h-60" />
+          <Cpu className="text-[#56CCF2] dark:text-[#2F80ED] w-60 h-60" />
         </div>
       </motion.div>
     </div>

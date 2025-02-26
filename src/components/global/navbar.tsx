@@ -18,19 +18,19 @@ export const Navbar = () => {
         <nav className="hidden md:flex items-center space-x-9 text-sm font-medium">
           <Link
             href="#projects"
-            className="text-[#2193b0] dark:text-[#6dd5ed] font-bold"
+            className="text-[#56CCF2] dark:text-[#2F80ED] font-bold"
           >
             {t("projects")}
           </Link>
           <Link
             href="#stack"
-            className="text-[#2193b0] dark:text-[#6dd5ed] font-bold"
+            className="text-[#56CCF2] dark:text-[#2F80ED] font-bold"
           >
             {t("stack")}
           </Link>
           <Link
             href="#contact"
-            className="text-[#2193b0] dark:text-[#6dd5ed] font-bold"
+            className="text-[#56CCF2] dark:text-[#2F80ED] font-bold"
           >
             {t("contact")}
           </Link>

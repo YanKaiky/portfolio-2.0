@@ -46,7 +46,7 @@ export const Hero = () => {
           <Button
             size="lg"
             variant="outline"
-            className="text-[#6dd5ed] border-[#6dd5ed] hover:bg-[#6dd5ed]/20"
+            className="text-[#2F80ED] border-[#2F80ED] hover:bg-[#2F80ED]/20"
           >
             <Link href="#contact" className="flex items-center space-x-2">
               {t("contact")}
