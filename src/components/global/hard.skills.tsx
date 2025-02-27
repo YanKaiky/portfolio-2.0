@@ -69,12 +69,14 @@ const technologies = [
 
 export const HardSkills = () => {
   return (
-    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {technologies.map((tech) => (
-        <Card key={tech.category} className="p-6 rounded-2xl">
+        <Card key={tech.category.toLowerCase()} className="p-6 rounded-2xl">
           <div className="flex items-center justify-start gap-6 mb-6">
-            <>{tech.icon}</>
-            <h3 className="text-2xl font-semibold">{tech.category}</h3>
+            {tech.icon}
+            <h3 className="text-2xl font-semibold text-primary tracking-wide">
+              {tech.category}
+            </h3>
           </div>
           <div className="flex flex-wrap gap-2">
             {tech.skills.map((skill) => (
