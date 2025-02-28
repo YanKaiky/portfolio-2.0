@@ -1,6 +1,6 @@
 export * from "./contact";
+export * from "./contact.animation";
 export * from "./contact.form";
-export * from "./cpu.animation";
 export * from "./footer";
 export * from "./hard.skills";
 export * from "./hero";

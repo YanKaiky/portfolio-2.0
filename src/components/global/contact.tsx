@@ -1,6 +1,6 @@
 "use client";
 
-import { ContactForm, CpuAnimation } from "@/components";
+import { ContactForm, ContactAnimation } from "@/components";
 import { useTranslations } from "next-intl";
 
 export const Contact = () => {
@@ -19,7 +19,7 @@ export const Contact = () => {
         <ContactForm />
       </div>
 
-      <CpuAnimation />
+      <ContactAnimation />
     </section>
   );
 };
