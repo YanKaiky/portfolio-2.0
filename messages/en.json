@@ -25,13 +25,13 @@
     "title": "Tech Stack"
   },
   "steps": {
-    "title": "Process steps",
+    "title": "Process Steps",
     "title1": "Planning",
     "description1": "Initial phase where objectives, strategies, resources, and timelines are defined, creating a clear roadmap to achieve the desired results.",
     "title2": "Validation",
     "description2": "Testing and adjustment phase to confirm the feasibility of the plan, ensuring that expectations and outcomes are realistic and achievable.",
     "title3": "Execution",
-    "description3": "Phase of putting the plan into action, coordinating teams, resources, and tasks to turn ideas into tangible results.",
+    "description3": "Phase of putting the plan into action, coordinating resources, and tasks to turn ideas into tangible results.",
     "title4": "Maintenance",
     "description4": "Ongoing phase of monitoring, correction, and improvement, ensuring that what has been implemented operates efficiently, safely, and in alignment with the initial goals."
   },
