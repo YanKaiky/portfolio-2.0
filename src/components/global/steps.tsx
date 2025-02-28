@@ -14,22 +14,22 @@ export const Steps = () => {
 
   const features = [
     {
-      icon: <Presentation className="h-10 w-10" />,
+      icon: <Presentation className="h-10 w-10 text-blue-500" />,
       title: t("title1"),
       description: t("description1"),
     },
     {
-      icon: <TicketSlash className="h-10 w-10" />,
+      icon: <TicketSlash className="h-10 w-10 text-blue-500" />,
       title: t("title2"),
       description: t("description2"),
     },
     {
-      icon: <MonitorCog className="h-10 w-10" />,
+      icon: <MonitorCog className="h-10 w-10 text-blue-500" />,
       title: t("title3"),
       description: t("description3"),
     },
     {
-      icon: <Construction className="h-10 w-10" />,
+      icon: <Construction className="h-10 w-10 text-blue-500" />,
       title: t("title4"),
       description: t("description4"),
     },
@@ -57,12 +57,10 @@ export const Steps = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white/5 backdrop-blur-sm rounded-lg p-6 hover:bg-white/10 transition-colors"
+              className="bg-black/5 dark:bg-white/5 backdrop-blur-sm rounded-lg p-6 hover:bg-black/10 dark:hover:bg-white/10 transition-colors"
             >
               <div className="mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold text-white mb-2">
-                {feature.title}
-              </h3>
+              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
               <p className="text-gray-400">{feature.description}</p>
             </motion.div>
           ))}

@@ -19,7 +19,7 @@ export const ContactAnimation = () => {
       >
         <div className="relative">
           <motion.div
-            className="absolute -inset-4 bg-[#2F80ED]/35 dark:bg-[#2F80ED]/5 rounded-full blur-xl"
+            className="absolute -inset-4 bg-white/35 dark:bg-white/5 rounded-full blur-xl"
             animate={{
               scale: [1, 1.2, 1],
               opacity: [0.5, 0.8, 0.5],
