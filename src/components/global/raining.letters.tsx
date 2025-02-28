@@ -1,7 +1,6 @@
 "use client";
 
-import type React from "react";
-import { useCallback, useEffect, useState } from "react";
+import { FC, useCallback, useEffect, useState } from "react";
 
 interface Character {
   char: string;
@@ -10,7 +9,7 @@ interface Character {
   speed: number;
 }
 
-export const RainingLetters: React.FC = () => {
+export const RainingLetters: FC = () => {
   const [characters, setCharacters] = useState<Character[]>([]);
   const [activeIndices, setActiveIndices] = useState<Set<number>>(new Set());
 

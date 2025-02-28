@@ -7,6 +7,7 @@ export * from "./github";
 export * from "./instagram";
 export * from "./linkedin";
 export * from "./mobile";
+export * from "./spinner";
 export * from "./tools";
 export * from "./us-flag";
 export * from "./whatsapp";

@@ -1,11 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Cpu } from "lucide-react";
+import { Ghost } from "lucide-react";
 
-export const CpuAnimation = () => {
+export const ContactAnimation = () => {
   return (
-    <div className="hidden md:block absolute top-28 left-36">
+    <div className="hidden md:block absolute bottom-28 right-36">
       <motion.div
         className="absolute inset-0 flex items-center justify-center"
         animate={{
@@ -31,7 +31,7 @@ export const CpuAnimation = () => {
             }}
           />
 
-          <Cpu className="text-[#56CCF2] dark:text-[#2F80ED] w-20 h-20" />
+          <Ghost className="w-20 h-20" />
         </div>
       </motion.div>
     </div>
