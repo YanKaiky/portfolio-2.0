@@ -2,6 +2,7 @@
   "navbar": {
     "projects": "Projects",
     "stack": "Stack",
+    "steps": "Steps",
     "contact": "Contact"
   },
   "hero": {
@@ -23,6 +24,17 @@
   "stack": {
     "title": "Tech Stack"
   },
+  "steps": {
+    "title": "Process Steps",
+    "title1": "Planning",
+    "description1": "Initial phase where objectives, strategies, resources, and timelines are defined, creating a clear roadmap to achieve the desired results.",
+    "title2": "Validation",
+    "description2": "Testing and adjustment phase to confirm the feasibility of the plan, ensuring that expectations and outcomes are realistic and achievable.",
+    "title3": "Execution",
+    "description3": "Phase of putting the plan into action, coordinating resources, and tasks to turn ideas into tangible results.",
+    "title4": "Maintenance",
+    "description4": "Ongoing phase of monitoring, correction, and improvement, ensuring that what has been implemented operates efficiently, safely, and in alignment with the initial goals."
+  },
   "contact": {
     "title": "Get in Touch"
   },
@@ -31,6 +43,10 @@
     "message": "Message",
     "sending": "Sending...",
     "send": "Send Message"
+  },
+  "contactAnimation": {
+    "hover": "Hover me",
+    "message": "Hi, I'm Boo! 👻 Want to talk to the genius who brought me to (non)existence? Send a smoke signal, a WhatsApp, or even a little boo in the DMs! ✌🏾"
   },
   "footer": {
     "allRightsReserved": "All rights reserved"

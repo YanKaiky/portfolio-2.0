@@ -1,4 +1,12 @@
-import { Contact, Footer, Hero, Navbar, Projects, Stack } from "@/components";
+import {
+  Contact,
+  Footer,
+  Hero,
+  Navbar,
+  Projects,
+  Stack,
+  Steps,
+} from "@/components";
 
 const Page = () => {
   return (
@@ -9,6 +17,7 @@ const Page = () => {
         <Hero />
         <Projects />
         <Stack />
+        <Steps />
         <Contact />
       </main>
 

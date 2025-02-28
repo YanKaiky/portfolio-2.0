@@ -26,8 +26,9 @@ export const PopoverMenu: FC = () => {
       >
         <nav className="flex flex-col gap-y-2 text-sm font-medium">
           <NavLink href="#projects">{t("projects")}</NavLink>
-          <NavLink href="#contact">{t("contact")}</NavLink>
           <NavLink href="#stack">{t("stack")}</NavLink>
+          <NavLink href="#steps">{t("steps")}</NavLink>
+          <NavLink href="#contact">{t("contact")}</NavLink>
 
           <div className="mt-2 flex gap-3">
             <TranslateButton />
