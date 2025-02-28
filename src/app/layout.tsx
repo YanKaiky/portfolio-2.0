@@ -1,11 +1,11 @@
 import { Spinner } from "@/icons";
 import { LocaleProvider, ThemeProvider } from "@/providers";
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Source_Code_Pro } from "next/font/google";
 import { ReactNode, Suspense } from "react";
 import "./globals.css";
 
-const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"] });
+const codePro = Source_Code_Pro({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Yan Kaiky - Full Stack Developer",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning className={jakarta.className}>
+      <body suppressHydrationWarning className={codePro.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
