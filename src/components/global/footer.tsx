@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { SocialMedias } from "./social.medias";
-import { YanKaikyDev } from "./yan.kaiky.dev";
+import { YanKaiky } from "./yan.kaiky";
 
 export const Footer = () => {
   const t = useTranslations("footer");
@@ -19,7 +19,7 @@ export const Footer = () => {
         </p>
 
         <div className="hidden md:inline-block">
-          <YanKaikyDev size="sm" />
+          <YanKaiky size="sm" />
         </div>
       </div>
     </footer>
