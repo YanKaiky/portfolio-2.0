@@ -33,6 +33,14 @@ export const Navbar = () => {
             </li>
             <li>
               <Link
+                href="#steps"
+                className="hover:text-blue-500 transition-colors font-bold"
+              >
+                {t("steps")}
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="#contact"
                 className="hover:text-blue-500 transition-colors font-bold"
               >

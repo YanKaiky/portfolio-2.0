@@ -1,7 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Bot, PresentationIcon, Target, Zap } from "lucide-react";
+import {
+  Construction,
+  MonitorCog,
+  Presentation,
+  TicketSlash,
+} from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export const Steps = () => {
@@ -9,22 +14,22 @@ export const Steps = () => {
 
   const features = [
     {
-      icon: <Target className="h-10 w-10" />,
+      icon: <Presentation className="h-10 w-10" />,
       title: t("title1"),
       description: t("description1"),
     },
     {
-      icon: <PresentationIcon className="h-10 w-10" />,
+      icon: <TicketSlash className="h-10 w-10" />,
       title: t("title2"),
       description: t("description2"),
     },
     {
-      icon: <Zap className="h-10 w-10" />,
+      icon: <MonitorCog className="h-10 w-10" />,
       title: t("title3"),
       description: t("description3"),
     },
     {
-      icon: <Bot className="h-10 w-10" />,
+      icon: <Construction className="h-10 w-10" />,
       title: t("title4"),
       description: t("description4"),
     },
@@ -35,15 +40,16 @@ export const Steps = () => {
       id="steps"
       className="relative min-h-[calc(100vh-76px)] flex flex-col justify-center py-16 md:py-28 lg:py-36"
     >
-      <div className="container mx-auto px-4">
+      <div className="px-4 md:px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl font-bold text-center text-white mb-12"
+          className="container-title"
         >
           {t("title")}
         </motion.h2>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <motion.div
