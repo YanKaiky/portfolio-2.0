@@ -7,10 +7,9 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "@/components";
 import { useLocale } from "@/hooks/use-locale";
-import { BrazilFlag } from "@/icons/brazil-flag";
-import { USFlag } from "@/icons/us-flag";
+import { BrazilFlag, USFlag } from "@/icons";
 
 export const TranslateButton = () => {
   const { locale, setLocale } = useLocale();

@@ -1,7 +1,7 @@
 "use client";
 
+import { ProjectCard } from "@/components";
 import { useTranslations } from "next-intl";
-import { ProjectCard } from "./project.card";
 
 export const Projects = () => {
   const t = useTranslations("projects");

@@ -1,3 +1,4 @@
+import { Button, NavLink, ThemeToggle, TranslateButton } from "@/components";
 import {
   Popover,
   PopoverContent,
@@ -6,10 +7,6 @@ import {
 import { Menu } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { FC } from "react";
-import { Button } from "../ui/button";
-import { NavLink } from "./nav.link";
-import { ThemeToggle } from "./theme.toggle";
-import { TranslateButton } from "./translate";
 
 export const PopoverMenu: FC = () => {
   const t = useTranslations("navbar");

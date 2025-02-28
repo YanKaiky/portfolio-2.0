@@ -1,11 +1,9 @@
 "use client";
 
+import { PopoverMenu, ThemeToggle, YanKaiky } from "@/components";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { PopoverMenu } from "./popover.menu";
-import { ThemeToggle } from "./theme.toggle";
 import { TranslateButton } from "./translate";
-import { YanKaiky } from "./yan.kaiky";
 
 export const Navbar = () => {
   const t = useTranslations("navbar");

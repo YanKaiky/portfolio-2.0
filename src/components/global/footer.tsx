@@ -1,8 +1,7 @@
 "use client";
 
+import { SocialMedias, YanKaiky } from "@/components";
 import { useTranslations } from "next-intl";
-import { SocialMedias } from "./social.medias";
-import { YanKaiky } from "./yan.kaiky";
 
 export const Footer = () => {
   const t = useTranslations("footer");

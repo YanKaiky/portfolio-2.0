@@ -1,4 +1,4 @@
-import { Card } from "@/components/ui/card";
+import { Card } from "@/components";
 import { Backend, DevOps, Frontend, Mobile, Tools } from "@/icons";
 
 const technologies = [
