@@ -15,7 +15,7 @@ export const Navbar = () => {
       <div className="px-4 md:px-6 flex h-14 items-center justify-between">
         <YanKaiky />
 
-        <nav className="hidden md:flex items-center space-x-9 text-sm font-medium">
+        <nav className="hidden md:flex items-center space-x-9 text-sm font-medium  md:ml-28">
           <ul className="flex space-x-9">
             <li>
               <Link
