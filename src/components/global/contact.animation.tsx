@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Cpu } from "lucide-react";
+import { Ghost } from "lucide-react";
 
 export const ContactAnimation = () => {
   return (
@@ -31,7 +31,7 @@ export const ContactAnimation = () => {
             }}
           />
 
-          <Cpu className="w-20 h-20" />
+          <Ghost className="w-20 h-20" />
         </div>
       </motion.div>
     </div>
