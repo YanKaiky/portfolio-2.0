@@ -23,6 +23,16 @@
   "stack": {
     "title": "Tecnologias"
   },
+  "steps": {
+    "title1": "Planejamento",
+    "description1": "Fase inicial onde são definidos objetivos, estratégias, recursos e cronogramas, criando um roteiro claro para alcançar os resultados desejados.",
+    "title2": "Validação",
+    "description2": "Etapa de testes e ajustes para confirmar a viabilidade do planejamento, garantindo que as expectativas e os resultados sejam realistas e alcançáveis.",
+    "title3": "Execução",
+    "description3": "Momento de colocar o planejamento em prática, coordenando equipes, recursos e ações para transformar ideias em resultados concretos.",
+    "title4": "Manutenção",
+    "description4": "Fase contínua de monitoramento, correção e melhoria, assegurando que o que foi implementado opere com eficiência, segurança e alinhamento aos objetivos iniciais."
+  },
   "contact": {
     "title": "Entre em Contato"
   },

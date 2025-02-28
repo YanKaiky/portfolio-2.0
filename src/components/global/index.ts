@@ -13,6 +13,7 @@ export * from "./projects";
 export * from "./raining.letters";
 export * from "./social.medias";
 export * from "./stack";
+export * from "./steps";
 export * from "./theme.toggle";
 export * from "./translate";
 export * from "./yan.kaiky";
