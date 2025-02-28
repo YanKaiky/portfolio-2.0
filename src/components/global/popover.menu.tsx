@@ -22,8 +22,12 @@ export const PopoverMenu: FC = () => {
         </Button>
       </PopoverTrigger>
 
-      <PopoverContent className="w-40 p-2 bg-gray-200 dark:bg-black/90 backdrop-blur-sm border border-white/10 rounded-lg">
-        <div className="flex flex-col gap-y-2">
+      <PopoverContent
+        align="end"
+        sideOffset={8}
+        className="w-44 p-3 bg-white dark:bg-black/90 backdrop-blur-lg shadow-lg border border-white/10 rounded-lg"
+      >
+        <nav className="flex flex-col gap-y-2 text-sm font-medium">
           <NavLink href="#projects">{t("projects")}</NavLink>
           <NavLink href="#contact">{t("contact")}</NavLink>
           <NavLink href="#stack">{t("stack")}</NavLink>
@@ -32,7 +36,7 @@ export const PopoverMenu: FC = () => {
             <TranslateButton />
             <ThemeToggle />
           </div>
-        </div>
+        </nav>
       </PopoverContent>
     </Popover>
   );

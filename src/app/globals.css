@@ -82,24 +82,15 @@
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
 @layer utilities {
   .bg-container-gradient {
-    @apply bg-gradient-to-r from-[#56CCF2] to-[#2F80ED];
+    @apply bg-gradient-to-br from-[#56CCF2] via-[#4285F4] to-[#2F80ED];
   }
   .text-gradient {
     @apply text-transparent bg-clip-text bg-container-gradient;
   }
   .container-title {
-    @apply text-3xl font-bold text-gradient tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center;
+    @apply  font-bold text-gradient tracking-tighter text-4xl mb-12 text-center;
   }
 }
 
