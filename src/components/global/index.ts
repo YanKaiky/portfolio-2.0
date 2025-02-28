@@ -12,6 +12,7 @@ export * from "./project.card";
 export * from "./projects";
 export * from "./raining.letters";
 export * from "./social.medias";
+export * from "./speech.bubble";
 export * from "./stack";
 export * from "./steps";
 export * from "./theme.toggle";
