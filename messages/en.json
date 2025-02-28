@@ -2,6 +2,7 @@
   "navbar": {
     "projects": "Projects",
     "stack": "Stack",
+    "steps": "Steps",
     "contact": "Contact"
   },
   "hero": {
