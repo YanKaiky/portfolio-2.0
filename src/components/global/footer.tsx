@@ -8,7 +8,7 @@ export const Footer = () => {
 
   return (
     <footer className="border-t">
-      <div className="flex items-center justify-center w-full shrink-0 md:justify-between py-2 md:px-6">
+      <div className="flex items-center justify-center w-full shrink-0 md:justify-between py-2 px-4 md:px-6">
         <SocialMedias />
 
         <p className="text-xs text-gray-500 dark:text-gray-400 md:mr-28">

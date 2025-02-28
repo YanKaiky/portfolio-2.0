@@ -12,6 +12,7 @@ interface Character {
 export const RainingLetters: FC = () => {
   const [characters, setCharacters] = useState<Character[]>([]);
   const [activeIndices, setActiveIndices] = useState<Set<number>>(new Set());
+  const [isMdScreen, setIsMdScreen] = useState(false);
 
   const createCharacters = useCallback(() => {
     const allChars =
@@ -32,10 +33,25 @@ export const RainingLetters: FC = () => {
   }, []);
 
   useEffect(() => {
-    setCharacters(createCharacters());
-  }, [createCharacters]);
+    const checkScreenSize = () => {
+      // 768px is the breakpoint for 'md' in Tailwind CSS
+      setIsMdScreen(window.innerWidth >= 768);
+    };
+
+    checkScreenSize();
+
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
 
   useEffect(() => {
+    if (isMdScreen) setCharacters(createCharacters());
+  }, [createCharacters, isMdScreen]);
+
+  useEffect(() => {
+    if (!isMdScreen) return;
+
     const updateActiveIndices = () => {
       const newActiveIndices = new Set<number>();
       const numActive = Math.floor(Math.random() * 3) + 3;
@@ -47,9 +63,11 @@ export const RainingLetters: FC = () => {
 
     const flickerInterval = setInterval(updateActiveIndices, 50);
     return () => clearInterval(flickerInterval);
-  }, [characters.length]);
+  }, [characters.length, isMdScreen]);
 
   useEffect(() => {
+    if (!isMdScreen) return;
+
     let animationFrameId: number;
 
     const updatePositions = () => {
@@ -75,36 +93,37 @@ export const RainingLetters: FC = () => {
 
     animationFrameId = requestAnimationFrame(updatePositions);
     return () => cancelAnimationFrame(animationFrameId);
-  }, []);
+  }, [isMdScreen]);
 
   return (
     <>
-      {characters.map((char, index) => (
-        <span
-          key={index}
-          className={`hidden md:inline-block absolute text-xs transition-colors duration-100 ${
-            activeIndices.has(index)
-              ? "text-[#00ff00] text-base scale-125 z-10 font-bold animate-pulse"
-              : "text-slate-600 font-light"
-          }`}
-          style={{
-            left: `${char.x}%`,
-            top: `${char.y}%`,
-            transform: `translate(-50%, -50%) ${
-              activeIndices.has(index) ? "scale(1.25)" : "scale(1)"
-            }`,
-            textShadow: activeIndices.has(index)
-              ? "0 0 8px rgba(255,255,255,0.8), 0 0 12px rgba(255,255,255,0.4)"
-              : "none",
-            opacity: activeIndices.has(index) ? 1 : 0.4,
-            transition: "color 0.1s, transform 0.1s, text-shadow 0.1s",
-            willChange: "transform, top",
-            fontSize: "1.8rem",
-          }}
-        >
-          {char.char}
-        </span>
-      ))}
+      {isMdScreen &&
+        characters.map((char, index) => (
+          <span
+            key={index}
+            className={`hidden md:inline-block absolute text-xs transition-colors duration-100 ${
+              activeIndices.has(index)
+                ? "text-[#00ff00] text-base scale-125 z-10 font-bold animate-pulse"
+                : "text-slate-600 font-light"
+            }`}
+            style={{
+              left: `${char.x}%`,
+              top: `${char.y}%`,
+              transform: `translate(-50%, -50%) ${
+                activeIndices.has(index) ? "scale(1.25)" : "scale(1)"
+              }`,
+              textShadow: activeIndices.has(index)
+                ? "0 0 8px rgba(255,255,255,0.8), 0 0 12px rgba(255,255,255,0.4)"
+                : "none",
+              opacity: activeIndices.has(index) ? 1 : 0.4,
+              transition: "color 0.1s, transform 0.1s, text-shadow 0.1s",
+              willChange: "transform, top",
+              fontSize: "1.8rem",
+            }}
+          >
+            {char.char}
+          </span>
+        ))}
 
       <style jsx global>{`
         .dud {
