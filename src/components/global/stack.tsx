@@ -1,7 +1,7 @@
 "use client";
 
+import { HardSkills } from "@/components";
 import { useTranslations } from "next-intl";
-import { HardSkills } from "./hard.skills";
 
 export const Stack = () => {
   const t = useTranslations("stack");

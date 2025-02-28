@@ -1,6 +1,5 @@
-import { Spinner } from "@/components/global/spinner";
-import { LocaleProvider } from "@/providers/locale-provider";
-import { ThemeProvider } from "@/providers/theme-provider";
+import { Spinner } from "@/icons";
+import { LocaleProvider, ThemeProvider } from "@/providers";
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { ReactNode, Suspense } from "react";

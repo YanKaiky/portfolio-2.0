@@ -1,11 +1,9 @@
 "use client";
 
+import { Button, MobileHero, RainingLetters, SocialMedias } from "@/components";
 import { FileUser } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { Button } from "../ui/button";
-import { RainingLetters } from "./raining.letters";
-import { SocialMedias } from "./social.medias";
 
 export const Hero = () => {
   const t = useTranslations("hero");
@@ -15,7 +13,11 @@ export const Hero = () => {
       id="hero"
       className="relative min-h-[calc(100vh-76px)] py-12 md:py-24 lg:py-32 flex flex-col items-center justify-center space-y-12 text-center"
     >
+      {/* only md screen size */}
       <RainingLetters />
+
+      {/* sm or smaller screen size only */}
+      <MobileHero />
 
       <div className="relative z-10 flex flex-col items-center justify-center space-y-8 text-center">
         <div className="mx-auto px-6">

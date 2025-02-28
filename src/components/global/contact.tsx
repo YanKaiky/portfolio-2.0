@@ -1,8 +1,7 @@
 "use client";
 
+import { ContactForm, CpuAnimation } from "@/components";
 import { useTranslations } from "next-intl";
-import { ContactForm } from "./contact.form";
-import { CpuAnimation } from "./cpu.animation";
 
 export const Contact = () => {
   const t = useTranslations("contact");

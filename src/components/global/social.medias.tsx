@@ -1,6 +1,6 @@
+import { Button } from "@/components";
 import { Email, GitHub, Instagram, LinkedIn, WhatsApp, X } from "@/icons";
 import Link from "next/link";
-import { Button } from "../ui/button";
 import { FC } from "react";
 
 type ISocialMediasProps = {
