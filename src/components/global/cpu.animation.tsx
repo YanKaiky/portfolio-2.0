@@ -5,7 +5,7 @@ import { Cpu } from "lucide-react";
 
 export const CpuAnimation = () => {
   return (
-    <div className="relative w-full h-full">
+    <div className="hidden md:block absolute top-28 left-36">
       <motion.div
         className="absolute inset-0 flex items-center justify-center"
         animate={{
@@ -31,7 +31,7 @@ export const CpuAnimation = () => {
             }}
           />
 
-          <Cpu className="text-[#56CCF2] dark:text-[#2F80ED] w-60 h-60" />
+          <Cpu className="text-[#56CCF2] dark:text-[#2F80ED] w-20 h-20" />
         </div>
       </motion.div>
     </div>

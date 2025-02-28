@@ -2,11 +2,11 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { FC } from "react";
 
-type IYanKaikyDevProps = {
+type IYanKaikyProps = {
   size?: "sm" | "md";
 };
 
-export const YanKaikyDev: FC<IYanKaikyDevProps> = ({ size = "md" }) => {
+export const YanKaiky: FC<IYanKaikyProps> = ({ size = "md" }) => {
   return (
     <Link
       href="#hero"
@@ -15,7 +15,7 @@ export const YanKaikyDev: FC<IYanKaikyDevProps> = ({ size = "md" }) => {
         "font-bold text-gradient"
       )}
     >
-      yankaiky.dev
+      Y.K.
     </Link>
   );
 };
