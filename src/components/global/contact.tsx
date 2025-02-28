@@ -10,21 +10,17 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-[calc(90vh-76px)] flex flex-col justify-center py-16 md:py-28 lg:py-36"
+      className="relative min-h-[calc(90vh-76px)] flex flex-col justify-center py-16 md:py-28 lg:py-36"
     >
       <div className="px-4 md:px-6">
         <div className="mx-auto">
           <h2 className="container-title mb-8">{t("title")}</h2>
-
-          <div className="w-full flex flex-col md:flex-row md:justify-center md:gap-12 lg:gap-16">
-            <div className="hidden md:flex md:w-[40%] lg:w-[35%] justify-center items-center">
-              <CpuAnimation />
-            </div>
-
-            <ContactForm />
-          </div>
         </div>
+
+        <ContactForm />
       </div>
+
+      <CpuAnimation />
     </section>
   );
 };

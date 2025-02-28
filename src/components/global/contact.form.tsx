@@ -33,7 +33,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <div className="md:w-[40%]">
+    <div className="container mx-auto max-w-lg">
       <Card className="p-6 rounded-2xl">
         <form ref={formRef as never} onSubmit={sendEmail} className="space-y-4">
           <div>
