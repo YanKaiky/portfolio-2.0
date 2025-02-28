@@ -24,10 +24,11 @@ export const Projects = () => {
             tags={["Vite", "TailwindCSS"]}
           />
           <ProjectCard
-            title="Financé"
+            title="Smartiky"
             description={t("secondProject")}
-            image="/financé.png"
-            tags={["React.js", "TailwindCSS", "Node.js", "React Native", "Socket.io"]}
+            image="/smartiky.png"
+            github="https://github.com/YanKaiky/smartiky"
+            tags={["Flutter", "Hive"]}
           />
           <ProjectCard
             title="GramHub"
@@ -38,9 +39,9 @@ export const Projects = () => {
           />
           <ProjectCard
             title="Wallart"
-            description={t("thirdProject")}
-            image="/gramhub.png"
-            github="https://github.com/YanKaiky/gramhub"
+            description={t("fourthProject")}
+            image="/wallart.png"
+            github="https://github.com/YanKaiky/wallart"
             tags={["Expo", "React Native"]}
           />
         </div>

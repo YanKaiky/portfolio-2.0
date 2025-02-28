@@ -12,7 +12,7 @@ interface ProjectCardProps {
   image: string;
   github?: string;
   link?: string;
-  tags: string[];
+  tags?: string[];
 }
 
 export const ProjectCard: FC<ProjectCardProps> = ({
@@ -21,7 +21,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
   image,
   github,
   link,
-  tags,
+  tags = [],
 }) => {
   const t = useTranslations("projectCard");
 
@@ -30,8 +30,9 @@ export const ProjectCard: FC<ProjectCardProps> = ({
       <div className="relative aspect-video">
         <Image
           src={image || "/placeholder.svg"}
-          alt={title}
+          alt={`Imagem do projeto ${title}`}
           fill
+          priority={title === "GramHub"} // Exemplo de priorização
           className="object-cover transition-transform hover:scale-105"
         />
       </div>
@@ -49,7 +50,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
           ))}
         </div>
       </CardContent>
-      <CardFooter className="p-5 pt-0 flex justify-between items-center mt-auto">
+      <CardFooter className="p-4 pt-0 flex flex-wrap justify-between items-center gap-2">
         {link ? (
           <Link
             href={link}
@@ -60,13 +61,13 @@ export const ProjectCard: FC<ProjectCardProps> = ({
             {t("view")}
           </Link>
         ) : (
-          <div
-            aria-disabled={!link}
+          <span
             className="inline-flex items-center gap-1 text-sm text-gray-500"
+            aria-disabled="true"
           >
             <Globe />
             {t("view")}
-          </div>
+          </span>
         )}
 
         {github ? (
@@ -79,13 +80,13 @@ export const ProjectCard: FC<ProjectCardProps> = ({
             {t("gitHubView")}
           </Link>
         ) : (
-          <div
-            aria-disabled={!link}
+          <span
             className="inline-flex items-center gap-1 text-sm text-gray-500"
+            aria-disabled="true"
           >
             <GitHub />
             {t("gitHubView")}
-          </div>
+          </span>
         )}
       </CardFooter>
     </Card>

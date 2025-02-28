@@ -5,7 +5,7 @@
     "contact": "Contato"
   },
   "hero": {
-    "description": "Construindo experiências digitais com tecnologias modernas. Focado em criar soluções elegantes para problemas complexos.",
+    "description": "Transformando ideias em experiências digitais inovadoras com tecnologias de ponta. Especializado em soluções intuitivas e elegantes para desafios complexos.",
     "resume": "Currículo",
     "contact": "Contato"
   },
@@ -13,7 +13,8 @@
     "title": "Projetos",
     "firstProject": "Uma landing page para bistrôs que ainda não posssuem um site e qur inovar sua aparição na internet.",
     "secondProject": "Um aplicativo de gerenciamento de finanças com recursos de colaboração em equipe.",
-    "thirdProject": "O GramHub revoluciona a forma como você se conecta com sua audiência no Instagram, transformando interações em oportunidades valiosas de negócio."
+    "thirdProject": "O GramHub revoluciona a forma como você se conecta com sua audiência no Instagram, transformando interações em oportunidades valiosas de negócio.",
+    "fourthProject": "Um aplicativo onde você encontra imagens incríveis organizadas por temas, cores e filtros de pesquisa fáceis de usar."
   },
   "projectCard": {
     "view": "Preview na web",
