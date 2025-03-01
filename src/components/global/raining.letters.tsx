@@ -10,16 +10,16 @@ interface Character {
   color: string;
 }
 
-const allChars = "YANKIDSTYANKIDST22122002!@#$$$$$¥¥¥¥£¢%&*</>?";
-
-const getRandomColor = () => {
-  const colors = ["#29bc5f", "#16bd90", "#11998e", "#b7b3b3", "#808080"];
-  return colors[Math.floor(Math.random() * colors.length)];
-};
-
 export const RainingLetters: FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const charactersRef = useRef<Character[]>([]);
+
+  const allChars = "YANKIDSTYANKIDST22122002!@#$$$$$¥¥¥¥£¢%&*</>?";
+
+  const getRandomColor = () => {
+    const colors = ["#475569", "#29bc5f"];
+    return colors[Math.floor(Math.random() * colors.length)];
+  };
 
   const createCharacters = useCallback(() => {
     const newCharacters: Character[] = [];
@@ -31,7 +31,7 @@ export const RainingLetters: FC = () => {
         x: Math.random() * window.innerWidth,
         y: Math.random() * window.innerHeight,
         speed: 0.5 + Math.random() * 1,
-        color: getRandomColor(),
+        color: i % 25 === 2 ? "#00ff00" : getRandomColor(),
       });
     }
 
