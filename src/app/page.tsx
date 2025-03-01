@@ -5,7 +5,7 @@ import {
   Navbar,
   Projects,
   Stack,
-  Steps,
+  Process,
 } from "@/components";
 
 const Page = () => {
@@ -17,7 +17,7 @@ const Page = () => {
         <Hero />
         <Projects />
         <Stack />
-        <Steps />
+        <Process />
         <Contact />
       </main>
 

@@ -33,10 +33,10 @@ export const Navbar = () => {
             </li>
             <li>
               <Link
-                href="#steps"
+                href="#process"
                 className="hover:text-green-500 transition-colors font-bold"
               >
-                {t("steps")}
+                {t("process")}
               </Link>
             </li>
             <li>
