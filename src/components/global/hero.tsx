@@ -55,9 +55,9 @@ export const Hero = () => {
               {t("description")}
             </motion.p>
           </div>
-        </div>
 
-        <SocialMedias hero />
+          <SocialMedias hero />
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

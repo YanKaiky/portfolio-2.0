@@ -14,7 +14,7 @@ export const Projects = () => {
       image: "/bistro-café.png",
       link: "https://menuplacerestaurant.netlify.app",
       github: "https://github.com/YanKaiky/restaurant-website",
-      tags: ["Vite", "TailwindCSS"],
+      tags: ["React.js", "Motion", "Tailwind"],
     },
     {
       title: "Smartiky",
@@ -28,7 +28,7 @@ export const Projects = () => {
       description: t("thirdProject"),
       image: "/gramhub.png",
       github: "https://github.com/YanKaiky/gramhub",
-      tags: ["DeepSeek", "Next.js", "TailwindCSS"],
+      tags: ["DeepSeek", "Next.js", "Motion", "Tailwind"],
     },
     {
       title: "Wallart",
