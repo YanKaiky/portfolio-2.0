@@ -92,7 +92,7 @@
 
 @layer utilities {
   .bg-container-gradient {
-    @apply bg-gradient-to-br from-[#56CCF2] via-[#4285F4] to-[#2F80ED];
+    @apply bg-gradient-to-br from-[#11998e] via-[#16bd90] to-[#38ef7d];
   }
 
   .text-gradient {

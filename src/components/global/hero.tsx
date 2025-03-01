@@ -30,7 +30,7 @@ export const Hero = () => {
               Full Stack & Mobile Developer
             </h2>
 
-            <p className="text-gray-400 text-xl mb-8 max-w-2xl mx-auto">
+            <p className="dark:text-gray-400 text-xl mb-8 max-w-2xl mx-auto">
               {t("description")}
             </p>
           </div>
@@ -49,7 +49,7 @@ export const Hero = () => {
           <Button
             size="lg"
             variant="outline"
-            className="text-[#2F80ED] border-[#2F80ED] hover:bg-[#2F80ED]/20 transition-all duration-300"
+            className="text-[#16bd90] border-[#16bd90] hover:bg-[#11998e]/20 transition-all duration-300"
           >
             <Link href="#contact" className="flex items-center space-x-2">
               {t("contact")}
