@@ -9,8 +9,8 @@ import {
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 
-export const Steps = () => {
-  const t = useTranslations("steps");
+export const Process = () => {
+  const t = useTranslations("process");
 
   const features = [
     {
@@ -37,7 +37,7 @@ export const Steps = () => {
 
   return (
     <section
-      id="steps"
+      id="process"
       className="relative min-h-[calc(100vh-76px)] flex flex-col justify-center py-16 md:py-28 lg:py-36"
     >
       <div className="px-4 md:px-6">
