@@ -10,7 +10,7 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative min-h-[calc(90vh-76px)] flex flex-col justify-center py-16 md:py-28 lg:py-36"
+      className="relative min-h-[calc(100vh-76px)] flex flex-col justify-center py-16 md:py-28 lg:py-36"
     >
       <BackgroundDots />
 
