@@ -14,7 +14,7 @@ export const SocialMediaButton: FC<ISocialMediaButtonProps> = ({
   label,
 }) => {
   return (
-    <Link href={href} target="_blank" className="hover:text-[#38ef7d] dark:hover:text-[#11998e]">
+    <Link href={href} target="_blank" className="hover:text-[#11998e] dark:hover:text-[#38ef7d]">
       {label ? (
         <Button variant="secondary" size="icon" className="rounded-full">
           {icon}
