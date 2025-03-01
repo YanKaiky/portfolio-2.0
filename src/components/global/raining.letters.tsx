@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, useCallback, useEffect, useRef } from "react";
+import { FC, useCallback, useEffect, useRef, useState } from "react";
 
 interface Character {
   char: string;
@@ -13,6 +13,7 @@ interface Character {
 export const RainingLetters: FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const charactersRef = useRef<Character[]>([]);
+  const [isMdScreen, setIsMdScreen] = useState(false);
 
   const allChars = "YANKIDSTYANKIDST22122002!@#$$$$$¥¥¥¥£¢%&*</>?";
 
@@ -39,6 +40,21 @@ export const RainingLetters: FC = () => {
   }, []);
 
   useEffect(() => {
+    const checkScreenSize = () => {
+      // 768px is the breakpoint for 'md' in Tailwind CSS
+      setIsMdScreen(window.innerWidth >= 768);
+    };
+
+    checkScreenSize();
+
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
+  useEffect(() => {
+    if (!isMdScreen) return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -81,12 +97,14 @@ export const RainingLetters: FC = () => {
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, [createCharacters]);
+  }, [createCharacters, isMdScreen]);
 
   return (
-    <canvas
-      ref={canvasRef}
-      className="hidden md:inline-block absolute top-0 left-0 z-0"
-    />
+    isMdScreen && (
+      <canvas
+        ref={canvasRef}
+        className="hidden md:inline-block absolute top-0 left-0 z-0"
+      />
+    )
   );
 };
