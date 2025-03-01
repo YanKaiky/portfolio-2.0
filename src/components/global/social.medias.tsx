@@ -1,6 +1,7 @@
 import { SocialMediaButton } from "@/components";
 import { Email, GitHub, Instagram, LinkedIn, WhatsApp, X } from "@/icons";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 import { FC } from "react";
 
 type ISocialMediasProps = {
@@ -42,7 +43,12 @@ export const SocialMedias: FC<ISocialMediasProps> = ({ hero = false }) => {
   ];
 
   return (
-    <div className={cn(!hero && "hidden md:flex", "space-x-4")}>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className={cn(!hero && "hidden md:flex", "space-x-4")}
+    >
       {socialMedias.map((socialMedia) => (
         <SocialMediaButton
           key={socialMedia.label}
@@ -51,6 +57,6 @@ export const SocialMedias: FC<ISocialMediasProps> = ({ hero = false }) => {
           label={hero ? socialMedia.label : ""}
         />
       ))}
-    </div>
+    </motion.div>
   );
 };
