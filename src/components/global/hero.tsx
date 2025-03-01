@@ -37,19 +37,34 @@ export const Hero = () => {
               Yan Kaiky
             </motion.h1>
 
-            <h2 className="text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-container-gradient mb-6">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-container-gradient mb-6"
+            >
               Full Stack & Mobile Developer
-            </h2>
+            </motion.h2>
 
-            <p className="dark:text-gray-400 text-xl mb-8 max-w-2xl mx-auto">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              className="dark:text-gray-400 text-xl mb-8 max-w-2xl mx-auto"
+            >
               {t("description")}
-            </p>
+            </motion.p>
           </div>
         </div>
 
         <SocialMedias hero />
 
-        <div className="mx-auto px-6 space-x-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9 }}
+          className="mx-auto px-6 space-x-4"
+        >
           <a href="/CV.pdf" download="Yan Kaiky Augusto dos Santos.pdf">
             <Button className="text-white bg-container-gradient transition-all duration-300 hover:brightness-110">
               {t("resume")}
@@ -66,7 +81,7 @@ export const Hero = () => {
               {t("contact")}
             </Link>
           </Button>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
