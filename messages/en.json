@@ -2,7 +2,7 @@
   "navbar": {
     "projects": "Projects",
     "stack": "Stack",
-    "steps": "Steps",
+    "process": "Process",
     "contact": "Contact"
   },
   "hero": {
@@ -24,8 +24,8 @@
   "stack": {
     "title": "Tech Stack"
   },
-  "steps": {
-    "title": "Process Steps",
+  "process": {
+    "title": "Process",
     "title1": "Planning",
     "description1": "Initial phase where objectives, strategies, resources, and timelines are defined, creating a clear roadmap to achieve the desired results.",
     "title2": "Validation",

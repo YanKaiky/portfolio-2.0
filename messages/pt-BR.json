@@ -2,7 +2,7 @@
   "navbar": {
     "projects": "Projetos",
     "stack": "Tecnologias",
-    "steps": "Etapas",
+    "process": "Processo",
     "contact": "Contato"
   },
   "hero": {
@@ -24,7 +24,7 @@
   "stack": {
     "title": "Tecnologias"
   },
-  "steps": {
+  "process": {
     "title": "Etapas do Processo",
     "title1": "Planejamento",
     "description1": "Fase inicial onde são definidos objetivos, estratégias, recursos e cronogramas, criando um roteiro claro para alcançar os resultados desejados.",
