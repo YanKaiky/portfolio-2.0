@@ -1,6 +1,12 @@
 "use client";
 
-import { Button, MobileHero, RainingLetters, SocialMedias } from "@/components";
+import {
+  BackgroundDots,
+  Button,
+  RainingLetters,
+  SocialMedias,
+} from "@/components";
+import { motion } from "framer-motion";
 import { FileUser } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
@@ -17,14 +23,19 @@ export const Hero = () => {
       <RainingLetters />
 
       {/* sm or smaller screen size only */}
-      <MobileHero />
+      <BackgroundDots hero />
 
       <div className="relative z-10 flex flex-col items-center justify-center space-y-8 text-center">
         <div className="mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-7xl lg:text-8xl font-bold mb-6 tracking-tight drop-shadow-md">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-7xl lg:text-8xl font-bold mb-6 tracking-tight drop-shadow-md"
+            >
               Yan Kaiky
-            </h1>
+            </motion.h1>
 
             <h2 className="text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-container-gradient mb-6">
               Full Stack & Mobile Developer

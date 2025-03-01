@@ -1,136 +1,92 @@
 "use client";
 
-import { FC, useCallback, useEffect, useState } from "react";
+import { FC, useCallback, useEffect, useRef } from "react";
 
 interface Character {
   char: string;
   x: number;
   y: number;
   speed: number;
+  color: string;
 }
 
+const allChars = "YANKIDSTYANKIDST22122002!@#$$$$$¥¥¥¥£¢%&*</>?";
+
+const getRandomColor = () => {
+  const colors = ["#29bc5f", "#16bd90", "#11998e", "#b7b3b3", "#808080"];
+  return colors[Math.floor(Math.random() * colors.length)];
+};
+
 export const RainingLetters: FC = () => {
-  const [characters, setCharacters] = useState<Character[]>([]);
-  const [activeIndices, setActiveIndices] = useState<Set<number>>(new Set());
-  const [isMdScreen, setIsMdScreen] = useState(false);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const charactersRef = useRef<Character[]>([]);
 
   const createCharacters = useCallback(() => {
-    const allChars =
-      "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:,.<>?";
-    const charCount = 300;
     const newCharacters: Character[] = [];
+    const charCount = 300;
 
     for (let i = 0; i < charCount; i++) {
       newCharacters.push({
         char: allChars[Math.floor(Math.random() * allChars.length)],
-        x: Math.random() * 100,
-        y: Math.random() * 100,
-        speed: 0.1 + Math.random() * 0.3,
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        speed: 0.5 + Math.random() * 1,
+        color: getRandomColor(),
       });
     }
 
-    return newCharacters;
+    charactersRef.current = newCharacters;
   }, []);
 
   useEffect(() => {
-    const checkScreenSize = () => {
-      // 768px is the breakpoint for 'md' in Tailwind CSS
-      setIsMdScreen(window.innerWidth >= 768);
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    createCharacters();
+
+    const draw = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      charactersRef.current.forEach((char) => {
+        ctx.fillStyle = char.color;
+        ctx.font = "20px Arial";
+        ctx.fillText(char.char, char.x, char.y);
+
+        char.y += char.speed;
+
+        if (char.y > canvas.height) {
+          char.y = -10;
+          char.x = Math.random() * canvas.width;
+          char.char = allChars[Math.floor(Math.random() * allChars.length)];
+          char.color = getRandomColor();
+        }
+      });
+
+      requestAnimationFrame(draw);
     };
 
-    checkScreenSize();
+    draw();
 
-    window.addEventListener("resize", checkScreenSize);
-
-    return () => window.removeEventListener("resize", checkScreenSize);
-  }, []);
-
-  useEffect(() => {
-    if (isMdScreen) setCharacters(createCharacters());
-  }, [createCharacters, isMdScreen]);
-
-  useEffect(() => {
-    if (!isMdScreen) return;
-
-    const updateActiveIndices = () => {
-      const newActiveIndices = new Set<number>();
-      const numActive = Math.floor(Math.random() * 3) + 3;
-      for (let i = 0; i < numActive; i++) {
-        newActiveIndices.add(Math.floor(Math.random() * characters.length));
-      }
-      setActiveIndices(newActiveIndices);
+    const handleResize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      createCharacters();
     };
 
-    const flickerInterval = setInterval(updateActiveIndices, 50);
-    return () => clearInterval(flickerInterval);
-  }, [characters.length, isMdScreen]);
-
-  useEffect(() => {
-    if (!isMdScreen) return;
-
-    let animationFrameId: number;
-
-    const updatePositions = () => {
-      setCharacters((prevChars) =>
-        prevChars.map((char) => ({
-          ...char,
-          y: char.y + char.speed,
-          ...(char.y >= 100 && {
-            y: -5,
-            x: Math.random() * 100,
-            char: "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:,.<>?"[
-              Math.floor(
-                Math.random() *
-                  "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:,.<>?"
-                    .length
-              )
-            ],
-          }),
-        }))
-      );
-      animationFrameId = requestAnimationFrame(updatePositions);
-    };
-
-    animationFrameId = requestAnimationFrame(updatePositions);
-    return () => cancelAnimationFrame(animationFrameId);
-  }, [isMdScreen]);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [createCharacters]);
 
   return (
-    <>
-      {isMdScreen &&
-        characters.map((char, index) => (
-          <span
-            key={index}
-            className={`hidden md:inline-block absolute text-xs transition-colors duration-100 ${
-              activeIndices.has(index)
-                ? "text-[#00ff00] text-base scale-125 z-10 font-bold animate-pulse"
-                : "text-slate-600 font-light"
-            }`}
-            style={{
-              left: `${char.x}%`,
-              top: `${char.y}%`,
-              transform: `translate(-50%, -50%) ${
-                activeIndices.has(index) ? "scale(1.25)" : "scale(1)"
-              }`,
-              textShadow: activeIndices.has(index)
-                ? "0 0 8px rgba(255,255,255,0.8), 0 0 12px rgba(255,255,255,0.4)"
-                : "none",
-              opacity: activeIndices.has(index) ? 1 : 0.4,
-              transition: "color 0.1s, transform 0.1s, text-shadow 0.1s",
-              willChange: "transform, top",
-              fontSize: "1.8rem",
-            }}
-          >
-            {char.char}
-          </span>
-        ))}
-
-      <style jsx global>{`
-        .dud {
-          color: #0f0;
-          opacity: 0.7;
-        }
-      `}</style>
-    </>
+    <canvas
+      ref={canvasRef}
+      className="hidden md:inline-block absolute top-0 left-0 z-0"
+    />
   );
 };

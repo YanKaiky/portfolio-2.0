@@ -1,6 +1,6 @@
 "use client";
 
-import { ContactAnimation, ContactForm } from "@/components";
+import { BackgroundDots, ContactAnimation, ContactForm } from "@/components";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 
@@ -12,7 +12,9 @@ export const Contact = () => {
       id="contact"
       className="relative min-h-[calc(90vh-76px)] flex flex-col justify-center py-16 md:py-28 lg:py-36"
     >
-      <div className="px-4 md:px-6">
+      <BackgroundDots />
+
+      <div className="relative px-4 md:px-6">
         <div className="mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}

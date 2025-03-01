@@ -1,6 +1,6 @@
 "use client";
 
-import { HardSkills } from "@/components";
+import { BackgroundDots, HardSkills } from "@/components";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 
@@ -11,9 +11,11 @@ export const Stack = () => {
     <section
       id="stack"
       aria-label="Tecnologias e Hard Skills"
-      className="min-h-[calc(100vh-76px)] flex items-center py-12 md:py-24 lg:py-32"
+      className="relative min-h-[calc(100vh-76px)] flex items-center py-12 md:py-24 lg:py-32"
     >
-      <div className="px-4 md:px-6">
+      <BackgroundDots />
+
+      <div className="relative px-4 md:px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
