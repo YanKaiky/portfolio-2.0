@@ -14,22 +14,22 @@ export const Steps = () => {
 
   const features = [
     {
-      icon: <Presentation className="h-10 w-10 text-blue-500" />,
+      icon: <Presentation className="h-10 w-10 text-[#16bd90]" />,
       title: t("title1"),
       description: t("description1"),
     },
     {
-      icon: <TicketSlash className="h-10 w-10 text-blue-500" />,
+      icon: <TicketSlash className="h-10 w-10 text-[#16bd90]" />,
       title: t("title2"),
       description: t("description2"),
     },
     {
-      icon: <MonitorCog className="h-10 w-10 text-blue-500" />,
+      icon: <MonitorCog className="h-10 w-10 text-[#16bd90]" />,
       title: t("title3"),
       description: t("description3"),
     },
     {
-      icon: <Construction className="h-10 w-10 text-blue-500" />,
+      icon: <Construction className="h-10 w-10 text-[#16bd90]" />,
       title: t("title4"),
       description: t("description4"),
     },
