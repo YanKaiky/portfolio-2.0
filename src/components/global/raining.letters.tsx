@@ -18,7 +18,7 @@ export const RainingLetters: FC = () => {
   const allChars = "YANKIDSTYANKIDST22122002!@#$$$$$¥¥¥¥£¢%&*</>?";
 
   const getRandomColor = () => {
-    const colors = ["#475569", "#29bc5f"];
+    const colors = ["#475569", "#29bc5f", "#00ff00"];
     return colors[Math.floor(Math.random() * colors.length)];
   };
 
@@ -29,10 +29,10 @@ export const RainingLetters: FC = () => {
     for (let i = 0; i < charCount; i++) {
       newCharacters.push({
         char: allChars[Math.floor(Math.random() * allChars.length)],
-        x: Math.random() * window.innerWidth,
-        y: Math.random() * window.innerHeight,
+        x: Math.random() * document.documentElement.clientWidth,
+        y: Math.random() * document.documentElement.clientHeight,
         speed: 0.5 + Math.random() * 1,
-        color: i % 25 === 2 ? "#00ff00" : getRandomColor(),
+        color: getRandomColor(),
       });
     }
 
@@ -41,12 +41,10 @@ export const RainingLetters: FC = () => {
 
   useEffect(() => {
     const checkScreenSize = () => {
-      // 768px is the breakpoint for 'md' in Tailwind CSS
       setIsMdScreen(window.innerWidth >= 768);
     };
 
     checkScreenSize();
-
     window.addEventListener("resize", checkScreenSize);
 
     return () => window.removeEventListener("resize", checkScreenSize);
@@ -61,8 +59,8 @@ export const RainingLetters: FC = () => {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = document.documentElement.clientWidth;
+    canvas.height = document.documentElement.clientHeight;
 
     createCharacters();
 
@@ -90,8 +88,8 @@ export const RainingLetters: FC = () => {
     draw();
 
     const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvas.width = document.documentElement.clientWidth;
+      canvas.height = document.documentElement.clientHeight;
       createCharacters();
     };
 
@@ -99,11 +97,18 @@ export const RainingLetters: FC = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, [createCharacters, isMdScreen]);
 
+  useEffect(() => {
+    document.body.style.overflowX = "hidden";
+    return () => {
+      document.body.style.overflowX = "auto";
+    };
+  }, []);
+
   return (
     isMdScreen && (
       <canvas
         ref={canvasRef}
-        className="hidden md:inline-block absolute top-0 left-0 z-0"
+        className="hidden md:inline-block absolute top-0 left-0 z-0 w-full h-full overflow-x-hidden"
       />
     )
   );
