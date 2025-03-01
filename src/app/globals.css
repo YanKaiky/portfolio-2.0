@@ -80,17 +80,27 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 
 @layer utilities {
   .bg-container-gradient {
     @apply bg-gradient-to-br from-[#56CCF2] via-[#4285F4] to-[#2F80ED];
   }
+
   .text-gradient {
     @apply text-transparent bg-clip-text bg-container-gradient;
   }
+
   .container-title {
-    @apply  font-bold text-gradient tracking-tighter text-4xl mb-12 text-center;
+    @apply font-bold text-gradient tracking-tighter text-4xl mb-12 text-center;
   }
 }
 
@@ -180,15 +190,4 @@ section {
   );
   background-size: 100% 100%;
   background-repeat: no-repeat;
-}
-
-
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
 }

@@ -1,6 +1,7 @@
 "use client";
 
-import { ContactForm, ContactAnimation } from "@/components";
+import { ContactAnimation, ContactForm } from "@/components";
+import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 
 export const Contact = () => {
@@ -13,7 +14,14 @@ export const Contact = () => {
     >
       <div className="px-4 md:px-6">
         <div className="mx-auto">
-          <h2 className="container-title mb-8">{t("title")}</h2>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="container-title mb-8"
+          >
+            {t("title")}
+          </motion.h2>
         </div>
 
         <ContactForm />

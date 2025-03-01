@@ -2,6 +2,7 @@
 
 import { Button, Card, Input, Textarea } from "@/components";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { FormEvent, useRef, useState } from "react";
 
@@ -30,7 +31,12 @@ export const ContactForm = () => {
   };
 
   return (
-    <div className="container mx-auto max-w-lg">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 1 * 0.1 }}
+      className="container mx-auto max-w-lg"
+    >
       <Card className="p-6 rounded-2xl">
         <form ref={formRef as never} onSubmit={sendEmail} className="space-y-4">
           <div>
@@ -78,6 +84,6 @@ export const ContactForm = () => {
           )}
         </form>
       </Card>
-    </div>
+    </motion.div>
   );
 };
