@@ -22,7 +22,7 @@ export const PopoverMenu: FC = () => {
       <PopoverContent
         align="end"
         sideOffset={8}
-        className="w-44 p-3 bg-white dark:bg-black/90 backdrop-blur-lg shadow-lg border border-white/10 rounded-lg"
+        className="md:hidden w-44 p-3 bg-white dark:bg-black/90 backdrop-blur-lg shadow-lg border border-white/10 rounded-lg"
       >
         <nav className="flex flex-col gap-y-2 text-sm font-medium">
           <NavLink href="#projects">{t("projects")}</NavLink>
