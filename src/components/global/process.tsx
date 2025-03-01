@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import {
   Construction,
   MonitorCog,
-  Presentation,
-  TicketSlash,
+  Brain,
+  ClipboardCheck,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 
@@ -14,12 +14,12 @@ export const Process = () => {
 
   const features = [
     {
-      icon: <Presentation className="h-10 w-10 text-[#16bd90]" />,
+      icon: <Brain className="h-10 w-10 text-[#16bd90]" />,
       title: t("title1"),
       description: t("description1"),
     },
     {
-      icon: <TicketSlash className="h-10 w-10 text-[#16bd90]" />,
+      icon: <ClipboardCheck className="h-10 w-10 text-[#16bd90]" />,
       title: t("title2"),
       description: t("description2"),
     },
