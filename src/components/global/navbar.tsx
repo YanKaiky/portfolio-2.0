@@ -18,7 +18,7 @@ export const Navbar = () => {
             <li>
               <Link
                 href="#projects"
-                className="hover:text-blue-500 transition-colors font-bold"
+                className="hover:text-green-500 transition-colors font-bold"
               >
                 {t("projects")}
               </Link>
@@ -26,7 +26,7 @@ export const Navbar = () => {
             <li>
               <Link
                 href="#stack"
-                className="hover:text-blue-500 transition-colors font-bold"
+                className="hover:text-green-500 transition-colors font-bold"
               >
                 {t("stack")}
               </Link>
@@ -34,7 +34,7 @@ export const Navbar = () => {
             <li>
               <Link
                 href="#steps"
-                className="hover:text-blue-500 transition-colors font-bold"
+                className="hover:text-green-500 transition-colors font-bold"
               >
                 {t("steps")}
               </Link>
@@ -42,7 +42,7 @@ export const Navbar = () => {
             <li>
               <Link
                 href="#contact"
-                className="hover:text-blue-500 transition-colors font-bold"
+                className="hover:text-green-500 transition-colors font-bold"
               >
                 {t("contact")}
               </Link>
