@@ -1,12 +1,18 @@
 "use client";
 
-import { PopoverMenu, ThemeToggle, YanKaiky } from "@/components";
+import { NavLink, PopoverMenu, ThemeToggle, YanKaiky } from "@/components";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 import { TranslateButton } from "./translate";
 
 export const Navbar = () => {
   const t = useTranslations("navbar");
+
+  const links = [
+    { label: t("projects"), href: "#projects" },
+    { label: t("stack"), href: "#stack" },
+    { label: t("process"), href: "#process" },
+    { label: t("contact"), href: "#contact" },
+  ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white/75 dark:bg-black/50 backdrop-blur-md">
@@ -15,38 +21,11 @@ export const Navbar = () => {
 
         <nav className="hidden md:flex items-center space-x-9 text-sm font-medium md:ml-28">
           <ul className="flex space-x-9">
-            <li>
-              <Link
-                href="#projects"
-                className="hover:text-green-500 transition-colors font-bold"
-              >
-                {t("projects")}
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#stack"
-                className="hover:text-green-500 transition-colors font-bold"
-              >
-                {t("stack")}
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#process"
-                className="hover:text-green-500 transition-colors font-bold"
-              >
-                {t("process")}
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#contact"
-                className="hover:text-green-500 transition-colors font-bold"
-              >
-                {t("contact")}
-              </Link>
-            </li>
+            {links.map((link) => (
+              <li key={link.label}>
+                <NavLink href={link.href}>{link.label}</NavLink>
+              </li>
+            ))}
           </ul>
         </nav>
 
