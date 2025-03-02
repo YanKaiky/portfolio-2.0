@@ -92,7 +92,7 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="hidden md:inline-block"
+              className="hidden md:inline-block md:w-1/2 lg:w-full"
             >
               <p className="text-xs">{t("developer")}</p>
               <Image src="/developer.svg" alt="Hero" width={300} height={300} />
