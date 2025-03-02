@@ -18,7 +18,7 @@ export const RainingLetters: FC = () => {
   const allChars = "YANKIDSTYANKIDST22122002!@#$$$$$¥¥¥¥£¢%&*</>?";
 
   const getRandomColor = () => {
-    const colors = ["#475569", "#29bc5f", "#00ff00"];
+    const colors = ["#475569", "#146833", "#38ef7d"];
     return colors[Math.floor(Math.random() * colors.length)];
   };
 
@@ -108,7 +108,7 @@ export const RainingLetters: FC = () => {
     isMdScreen && (
       <canvas
         ref={canvasRef}
-        className="hidden md:inline-block absolute top-0 left-0 z-0 w-full h-full overflow-x-hidden"
+        className="hidden md:inline-block opacity-20 dark:opacity-50 absolute top-0 left-0 z-0 w-full h-full overflow-x-hidden"
       />
     )
   );
