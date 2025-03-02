@@ -5,10 +5,12 @@ import {
   Button,
   RainingLetters,
   SocialMedias,
+  SpeechBubble,
 } from "@/components";
 import { motion } from "framer-motion";
 import { FileUser } from "lucide-react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import Link from "next/link";
 
 export const Hero = () => {
@@ -25,8 +27,8 @@ export const Hero = () => {
       {/* sm or smaller screen size only */}
       <BackgroundDots hero />
 
-      <div className="relative z-10 flex flex-col items-center justify-center space-y-8 text-center">
-        <div className="mx-auto px-6">
+      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center space-y-8 space-x-8 text-center">
+        <div className="mx-auto px-6 space-y-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -57,31 +59,46 @@ export const Hero = () => {
           </div>
 
           <SocialMedias hero />
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9 }}
+            className="mx-auto px-6 space-x-4"
+          >
+            <a href="/CV.pdf" download="Yan Kaiky Augusto dos Santos.pdf">
+              <Button className="text-white bg-container-gradient transition-all duration-300 hover:brightness-110">
+                {t("resume")}
+                <FileUser />
+              </Button>
+            </a>
+
+            <Button
+              size="lg"
+              variant="outline"
+              className="text-[#16bd90] border-[#16bd90] hover:bg-[#11998e]/20 transition-all duration-300"
+            >
+              <Link href="#contact" className="flex items-center space-x-2">
+                {t("contact")}
+              </Link>
+            </Button>
+          </motion.div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9 }}
-          className="mx-auto px-6 space-x-4"
-        >
-          <a href="/CV.pdf" download="Yan Kaiky Augusto dos Santos.pdf">
-            <Button className="text-white bg-container-gradient transition-all duration-300 hover:brightness-110">
-              {t("resume")}
-              <FileUser />
-            </Button>
-          </a>
-
-          <Button
-            size="lg"
-            variant="outline"
-            className="text-[#16bd90] border-[#16bd90] hover:bg-[#11998e]/20 transition-all duration-300"
-          >
-            <Link href="#contact" className="flex items-center space-x-2">
-              {t("contact")}
-            </Link>
-          </Button>
-        </motion.div>
+        <SpeechBubble
+          message={t("developerCoffee")}
+          trigger={
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="hidden md:inline-block"
+            >
+              <p className="text-xs">{t("developer")}</p>
+              <Image src="/developer.svg" alt="Hero" width={300} height={300} />
+            </motion.div>
+          }
+        />
       </div>
     </section>
   );
