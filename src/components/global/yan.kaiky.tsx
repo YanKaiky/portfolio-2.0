@@ -11,8 +11,8 @@ export const YanKaiky: FC<IYanKaikyProps> = ({ size = "md" }) => {
     <Link
       href="#hero"
       className={cn(
-        size === "sm" ? "text-xs" : "text-2xl",
-        "font-bold text-gradient"
+        size === "sm" ? "text-xs text-white" : "text-2xl text-gradient",
+        "font-bold"
       )}
     >
       Y.K.

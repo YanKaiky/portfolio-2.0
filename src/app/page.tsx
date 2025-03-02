@@ -3,9 +3,9 @@ import {
   Footer,
   Hero,
   Navbar,
+  Process,
   Projects,
   Stack,
-  Process,
 } from "@/components";
 
 const Page = () => {
