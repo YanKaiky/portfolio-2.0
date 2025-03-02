@@ -7,16 +7,29 @@ type IEmailProps = {
 export const Email: FC<IEmailProps> = ({ size = "sm" }) => {
   return (
     <svg
+      width={size === "sm" ? "22" : "17"}
+      height={size === "sm" ? "22" : "17"}
+      viewBox="0 0 24 24"
+      fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      width={size === "sm" ? "22" : "16"}
-      height={size === "sm" ? "22" : "16"}
-      viewBox="0 0 32 32"
       className="text-black dark:text-white"
     >
       <path
-        fill="currentColor"
-        d="M29 4H3a3 3 0 0 0-3 3v18a3 3 0 0 0 3 3h26a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-.72 2L16 14.77 3.72 6zM2 24.59V7.23l10.12 7.23zM3.41 26l10.36-10.36 1.64 1.17a1 1 0 0 0 1.16 0l1.64-1.17L28.59 26zM30 24.59 19.88 14.46 30 7.23z"
-        data-name="2-Email"
+        d="M4 7.00005L10.2 11.65C11.2667 12.45 12.7333 12.45 13.8 11.65L20 7"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <rect
+        x="3"
+        y="5"
+        width="18"
+        height="14"
+        rx="2"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
       />
     </svg>
   );
