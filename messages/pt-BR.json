@@ -1,5 +1,6 @@
 {
   "navbar": {
+    "hero": "Hero",
     "projects": "Projetos",
     "stack": "Tecnologias",
     "process": "Processo",

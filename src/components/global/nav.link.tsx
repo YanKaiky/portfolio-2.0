@@ -3,13 +3,15 @@ import { FC, ReactNode } from "react";
 
 type INavLinkProps = {
   href: string;
+  onClick?: VoidFunction;
   children: ReactNode;
 };
 
-export const NavLink: FC<INavLinkProps> = ({ href, children }) => {
+export const NavLink: FC<INavLinkProps> = ({ children, href, onClick }) => {
   return (
     <Link
       href={href}
+      onClick={onClick}
       className="md:hover:text-green-500 md:font-bold transition-colors relative group"
     >
       {children}

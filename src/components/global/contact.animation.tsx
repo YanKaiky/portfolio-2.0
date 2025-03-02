@@ -9,7 +9,7 @@ export const ContactAnimation = () => {
   const t = useTranslations("contactAnimation");
 
   return (
-    <div className="hidden md:block absolute bottom-28 right-36">
+    <div className="hidden md:block absolute bottom-20 right-16 lg:bottom-28 lg:right-36">
       <motion.div
         className="absolute inset-0 flex items-center justify-center"
         animate={{
