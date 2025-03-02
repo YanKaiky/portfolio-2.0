@@ -15,7 +15,7 @@ export const RainingLetters: FC = () => {
   const charactersRef = useRef<Character[]>([]);
   const [isMdScreen, setIsMdScreen] = useState(false);
 
-  const allChars = "YANKIDSTYANKIDST22122002!@#$$$$$¥¥¥¥£¢%&*</>?";
+  const allChars = "YANKIDSTYANKIDST22122002!@#$$$$$¥¥¥¥£¢%&*</>?☕︎✌";
 
   const getRandomColor = () => {
     const colors = ["#475569", "#146833", "#38ef7d"];
