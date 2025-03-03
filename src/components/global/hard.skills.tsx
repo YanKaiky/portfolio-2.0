@@ -7,7 +7,7 @@ const technologies = [
     category: "Front-end",
     icon: <Frontend />,
     skills: [
-      "React",
+      "React.js",
       "Vite",
       "Next.js",
       "TypeScript",
@@ -27,6 +27,7 @@ const technologies = [
       "Adonis.js",
       "PHP",
       "Java",
+      "Redis",
       "PostgreSQL",
       "MySQL",
       "MongoDB",
@@ -64,6 +65,11 @@ const technologies = [
       "BitBucket",
       "Vercel",
       "Netlify",
+      "Proxyman",
+      "Xcode",
+      "NPM",
+      "Yarn",
+      "Bun",
     ],
   },
 ];
