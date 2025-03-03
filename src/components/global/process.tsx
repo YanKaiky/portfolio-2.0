@@ -1,12 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Construction,
-  MonitorCog,
-  Brain,
-  ClipboardCheck,
-} from "lucide-react";
+import { Construction, MonitorCog, Brain, ClipboardCheck } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export const Process = () => {
@@ -59,8 +54,11 @@ export const Process = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-black/5 dark:bg-white/5 backdrop-blur-sm rounded-lg p-6 hover:bg-black/10 dark:hover:bg-white/10 transition-colors"
             >
-              <div className="mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+              <div className="flex items-center gap-6">
+                <div className="mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+              </div>
+
               <p className="text-gray-400">{feature.description}</p>
             </motion.div>
           ))}
