@@ -67,6 +67,9 @@ const technologies = [
       "Netlify",
       "Proxyman",
       "Xcode",
+      "NPM",
+      "Yarn",
+      "Bun",
     ],
   },
 ];
