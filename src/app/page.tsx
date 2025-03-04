@@ -10,7 +10,7 @@ import {
 
 const Page = () => {
   return (
-    <div className="min-h-screen bg-background font-sans antialiased">
+    <div className="min-h-screen bg-background font-mono antialiased">
       <Navbar />
 
       <main className="px-4 md:px-6">
