@@ -99,6 +99,30 @@
     @apply text-transparent bg-clip-text bg-container-gradient;
   }
 
+  .text-green-light {
+    @apply text-[#38ef7d];
+  }
+
+  .text-green-dark {
+    @apply text-[#16bd90];
+  }
+
+  .bg-green-light {
+    @apply bg-[#38ef7d];
+  }
+
+  .bg-green-dark {
+    @apply bg-[#16bd90];
+  }
+
+  .bg-green-dark-hover {
+    @apply bg-[#16bd90]/20;
+  }
+
+  .border-green-dark {
+    @apply border-[#16bd90]
+  }
+
   .container-title {
     @apply font-bold text-gradient tracking-tighter text-4xl mb-12 text-center;
   }
