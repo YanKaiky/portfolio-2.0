@@ -80,14 +80,6 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
-
-  * {
-    @apply border-border outline-ring/50;
-  }
-
-  body {
-    @apply bg-background text-foreground;
-  }
 }
 
 @layer utilities {
@@ -120,7 +112,7 @@
   }
 
   .border-green-dark {
-    @apply border-[#16bd90]
+    @apply border-[#16bd90];
   }
 
   .container-title {
@@ -134,17 +126,26 @@
 
 /* Firefox */
 * {
+  @apply border-border outline-ring/50;
   scrollbar-width: thin; /* none | auto  */
   scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
 
+body {
+  @apply bg-background text-foreground;
+  color: var(--foreground);
+  background: var(--background);
+}
+
 section {
   scroll-snap-align: center;
 }
 
-/* Firefox */
+.backdrop--blur__safari {
+  -webkit-backdrop-filter: blur(5px);
+}
 
 /* Chrome, Edge, Safari */
 *::-webkit-scrollbar {
@@ -164,54 +165,4 @@ section {
 
 *::-webkit-scrollbar-thumb:hover {
   background: var(--scrollbar-thumb-hover);
-}
-
-.radial--gradient {
-  background-image: radial-gradient(
-    ellipse farthest-side,
-    rgba(51, 82, 204, 0.15) 20%,
-    #09090b 100%
-  );
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-
-.radial--gradient--pink {
-  background-image: radial-gradient(
-    at center,
-    rgba(148, 52, 230, 0.1) 10%,
-    transparent 50%
-  );
-  background-size: 70% 80%;
-  background-repeat: no-repeat;
-}
-
-.radial--gradient--automations {
-  background-image: radial-gradient(
-    at top left,
-    rgba(51, 82, 204, 0.05) 40%,
-    #1d1d1d 60%
-  );
-  background-size: 40% 100%;
-  background-repeat: no-repeat;
-}
-
-.radial--double--gradient--cards--top {
-  background-image: radial-gradient(
-    at top left,
-    rgba(51, 82, 204, 0.3) 50%,
-    transparent 70%
-  );
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-
-.radial--double--gradient--cards--bottom {
-  background-image: radial-gradient(
-    at bottom right,
-    rgba(51, 82, 204, 0.1) 50%,
-    transparent 70%
-  );
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
 }
