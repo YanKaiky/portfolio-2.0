@@ -34,7 +34,7 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-7xl lg:text-8xl font-bold mb-6 tracking-tight drop-shadow-md"
+              className="text-6xl lg:text-8xl font-bold mb-6 tracking-tight drop-shadow-md"
             >
               Yan Kaiky
             </motion.h1>
@@ -43,7 +43,7 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-container-gradient mb-6"
+              className="text-3xl lg:text-5xl font-bold text-transparent bg-clip-text bg-container-gradient mb-6"
             >
               Full Stack & Mobile Developer
             </motion.h2>
@@ -52,7 +52,7 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
-              className="dark:text-gray-400 text-xl mb-8 max-w-2xl mx-auto"
+              className="dark:text-gray-400 text-md md:text-xl mb-8 max-w-2xl mx-auto"
             >
               {t("description")}
             </motion.p>
