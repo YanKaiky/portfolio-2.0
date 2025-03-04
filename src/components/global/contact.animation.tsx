@@ -40,7 +40,7 @@ export const ContactAnimation = () => {
 
               <p className="text-[10px] mb-3">{t("hover")}</p>
 
-              <Ghost className="w-20 h-20" />
+              <Ghost className="w-20 h-20 text-green-dark dark:text-white" />
             </div>
           }
         />

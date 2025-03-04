@@ -9,22 +9,22 @@ export const Process = () => {
 
   const features = [
     {
-      icon: <Brain className="h-10 w-10 text-[#16bd90]" />,
+      icon: <Brain className="h-10 w-10 text-green-dark" />,
       title: t("title1"),
       description: t("description1"),
     },
     {
-      icon: <ClipboardCheck className="h-10 w-10 text-[#16bd90]" />,
+      icon: <ClipboardCheck className="h-10 w-10 text-green-dark" />,
       title: t("title2"),
       description: t("description2"),
     },
     {
-      icon: <MonitorCog className="h-10 w-10 text-[#16bd90]" />,
+      icon: <MonitorCog className="h-10 w-10 text-green-dark" />,
       title: t("title3"),
       description: t("description3"),
     },
     {
-      icon: <Construction className="h-10 w-10 text-[#16bd90]" />,
+      icon: <Construction className="h-10 w-10 text-green-dark" />,
       title: t("title4"),
       description: t("description4"),
     },
