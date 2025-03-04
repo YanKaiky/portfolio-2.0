@@ -1,17 +1,24 @@
 import { Spinner } from "@/icons";
 import { LocaleProvider, ThemeProvider } from "@/providers";
 import type { Metadata } from "next";
-import { ReactNode, Suspense } from "react";
+import { Source_Code_Pro } from "next/font/google";
+import { FC, ReactNode, Suspense } from "react";
 import "./globals.css";
+
+const sourceCodePro = Source_Code_Pro({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Yan Kaiky - Full Stack Developer",
   description: "Full Stack developer portfolio showcasing projects and skills",
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+type IRootLayoutProps = {
+  children: ReactNode;
+};
+
+const RootLayout: FC<IRootLayoutProps> = ({ children }) => {
   return (
-    <html lang="en">
+    <html lang="en" className={sourceCodePro.className}>
       <body suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
@@ -26,4 +33,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
