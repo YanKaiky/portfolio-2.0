@@ -1,8 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Construction, MonitorCog, Brain, ClipboardCheck } from "lucide-react";
+import { Brain, ClipboardCheck, Construction, MonitorCog } from "lucide-react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
+import { SpeechBubble } from "./speech.bubble";
 
 export const Process = () => {
   const t = useTranslations("process");
@@ -52,14 +54,30 @@ export const Process = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-black/5 dark:bg-white/5 backdrop-blur-sm rounded-lg p-6 hover:bg-black/10 dark:hover:bg-white/10 transition-colors"
+              className="bg-black/5 dark:bg-white/5 backdrop-blur-sm rounded-lg p-6 hover:bg-black/10 dark:hover:bg-white/10 transition-colors relative"
             >
+              {index === 2 && (
+                <div className="absolute top-6 right-3 p-2">
+                  <SpeechBubble
+                    message={t("descriptionCoffee")}
+                    trigger={
+                      <Image
+                        src="/coffee-cup-green.svg"
+                        alt="Coffee Cup"
+                        width={25}
+                        height={25}
+                      />
+                    }
+                  />
+                </div>
+              )}
+
               <div className="flex items-center gap-6">
                 <div className="mb-4">{feature.icon}</div>
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
               </div>
 
-              <p className="text-gray-400">{feature.description}</p>
+              <p className="dark:text-gray-400">{feature.description}</p>
             </motion.div>
           ))}
         </div>
