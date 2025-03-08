@@ -87,8 +87,12 @@
     @apply bg-gradient-to-br from-[#11998e] via-[#16bd90] to-[#38ef7d];
   }
 
+  .bg-container-gradient-light {
+    @apply bg-gradient-to-br from-[#38ef7d] via-[#16bd90] to-[#11998e];
+  }
+
   .text-gradient {
-    @apply text-transparent bg-clip-text bg-container-gradient;
+    @apply text-transparent bg-clip-text bg-container-gradient-light dark:bg-container-gradient;
   }
 
   .text-green-light {
@@ -112,7 +116,7 @@
   }
 
   .border-green-dark {
-    @apply border-[#16bd90];
+    @apply border-[#16bd90] border-2;
   }
 
   .container-title {

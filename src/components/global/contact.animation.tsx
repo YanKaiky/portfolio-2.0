@@ -26,7 +26,7 @@ export const ContactAnimation = () => {
           trigger={
             <div className="relative">
               <motion.div
-                className="absolute -inset-4 bg-black/15 dark:bg-white/5 rounded-full blur-xl"
+                className="absolute -inset-4 bg-black/25 dark:bg-white/5 rounded-full blur-3xl"
                 animate={{
                   scale: [1, 1.2, 1],
                   opacity: [0.5, 0.8, 0.5],
