@@ -43,7 +43,7 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-3xl lg:text-5xl font-bold text-transparent bg-clip-text bg-container-gradient mb-6"
+              className="text-3xl lg:text-5xl font-bold text-transparent bg-clip-text bg-container-gradient-light dark:bg-container-gradient mb-6"
             >
               Full Stack & Mobile Developer
             </motion.h2>
@@ -76,9 +76,9 @@ export const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              className="text-green-dark border-green-dark hover:bg-green-dark-hover transition-all duration-300"
+              className="text-green-dark font-semibold border-green-dark hover:bg-green-dark-hover transition-all duration-300"
             >
-              <Link href="#contact" className="flex items-center space-x-2">
+              <Link href="#contact" className="font-semibold flex items-center space-x-2">
                 {t("contact")}
               </Link>
             </Button>
