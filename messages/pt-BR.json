@@ -46,7 +46,8 @@
     "name": "Nome",
     "message": "Mensagem",
     "sending": "Enviando...",
-    "send": "Enviar Mensagem"
+    "send": "Enviar Mensagem",
+    "sent": "Mensagem Enviada!"
   },
   "contactAnimation": {
     "hover": "Chega mais com o mouse!",
