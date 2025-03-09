@@ -46,7 +46,8 @@
     "name": "Name",
     "message": "Message",
     "sending": "Sending...",
-    "send": "Send Message"
+    "send": "Send Message",
+    "sent": "Message sent!"
   },
   "contactAnimation": {
     "hover": "Hover over me!",

@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 interface Character {
   char: string;
@@ -10,7 +10,7 @@ interface Character {
   color: string;
 }
 
-export const RainingLetters: FC = () => {
+export const RainingLetters = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const charactersRef = useRef<Character[]>([]);
   const [isMdScreen, setIsMdScreen] = useState(false);
