@@ -47,7 +47,7 @@ export const SocialMedias: FC<ISocialMediasProps> = ({ hero = false }) => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className={cn("flex", "space-x-4", !hero && "justify-center")}
+      className={cn("flex", "space-x-4", "justify-center")}
     >
       {socialMedias.map((socialMedia) => (
         <SocialMediaButton

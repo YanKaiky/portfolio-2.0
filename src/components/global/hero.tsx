@@ -29,7 +29,7 @@ export const Hero = () => {
 
       <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center space-y-8 space-x-8 text-center w-full">
         {/* Glow effect */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] -z-10 pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-primary/20 rounded-full blur-[80px] md:blur-[100px] -z-10 pointer-events-none" />
 
         <div className="mx-auto px-6 space-y-8 max-w-5xl">
           <div className="max-w-4xl mx-auto text-center">
@@ -37,7 +37,7 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-6xl md:text-8xl lg:text-9xl font-extrabold mb-6 tracking-tight drop-shadow-sm"
+              className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-extrabold mb-6 tracking-tight drop-shadow-sm"
             >
               Yan Kaiky
             </motion.h1>
