@@ -86,11 +86,13 @@ export const HardSkills = () => {
         >
           <Card
             key={tech.category.toLowerCase()}
-            className="p-6 h-full rounded-2xl"
+            className="p-6 h-full rounded-2xl hover:shadow-lg hover:border-emerald-500/30 transition-all duration-300 group border-border/50"
           >
-            <div className="flex items-center justify-start gap-6 mb-6">
-              {tech.icon}
-              <h3 className="text-2xl font-semibold text-primary tracking-wide">
+            <div className="flex items-center justify-start gap-4 mb-6">
+              <div className="p-2 bg-primary/10 rounded-lg text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform duration-300">
+                {tech.icon}
+              </div>
+              <h3 className="text-xl font-bold tracking-tight group-hover:text-emerald-500 transition-colors">
                 {tech.category}
               </h3>
             </div>
@@ -98,7 +100,7 @@ export const HardSkills = () => {
               {tech.skills.map((skill) => (
                 <span
                   key={skill}
-                  className="inline-flex items-center rounded-md bg-primary/10 px-2 py-1 text-sm font-medium text-primary ring-1 ring-inset ring-primary/20"
+                  className="inline-flex items-center rounded-md bg-secondary px-2.5 py-1 text-sm font-medium text-secondary-foreground group-hover:bg-emerald-500/10 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors duration-300"
                 >
                   {skill}
                 </span>

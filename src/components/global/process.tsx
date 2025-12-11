@@ -54,10 +54,10 @@ export const Process = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white dark:bg-white/5 backdrop-blur-sm rounded-lg p-6 hover:bg-white/65 dark:hover:bg-white/10 transition-colors relative"
+              className="bg-card/50 backdrop-blur-sm rounded-2xl p-8 border border-border/50 hover:border-emerald-500/50 hover:shadow-lg hover:shadow-emerald-500/10 transition-all duration-300 relative group"
             >
               {index === 2 && (
-                <div className="absolute top-6 right-3 p-2">
+                <div className="absolute top-6 right-6">
                   <SpeechBubble
                     message={t("descriptionCoffee")}
                     trigger={
@@ -72,14 +72,16 @@ export const Process = () => {
                 </div>
               )}
 
-              <div className="flex items-center gap-6">
-                <div className="mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold mb-2 text-green-dark">
+              <div className="flex flex-col gap-4">
+                <div className="p-3 w-fit rounded-xl bg-primary/10 text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform duration-300">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-bold mb-2 group-hover:text-emerald-500 transition-colors">
                   {feature.title}
                 </h3>
               </div>
 
-              <p className="dark:text-gray-400">{feature.description}</p>
+              <p className="text-muted-foreground leading-relaxed mt-2">{feature.description}</p>
             </motion.div>
           ))}
         </div>

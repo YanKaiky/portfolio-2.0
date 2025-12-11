@@ -10,10 +10,10 @@ import {
 
 const Page = () => {
   return (
-    <div className="min-h-screen bg-background font-mono antialiased">
+    <div className="min-h-screen bg-background font-sans antialiased">
       <Navbar />
 
-      <main className="px-4 md:px-6">
+      <main className="px-0 md:px-12 lg:px-24">
         <Hero />
         <Projects />
         <Stack />

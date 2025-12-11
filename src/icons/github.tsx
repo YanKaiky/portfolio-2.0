@@ -2,9 +2,10 @@ import { FC } from "react";
 
 type IGitHubProps = {
   size?: "xs" | "sm";
+  className?: string;
 };
 
-export const GitHub: FC<IGitHubProps> = ({ size = "sm" }) => {
+export const GitHub: FC<IGitHubProps> = ({ size = "sm", className }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -13,7 +14,7 @@ export const GitHub: FC<IGitHubProps> = ({ size = "sm" }) => {
       width={size === "sm" ? "22" : "16"}
       height={size === "sm" ? "22" : "16"}
       viewBox="0 0 24 24"
-      className="text-black dark:text-white"
+      className={`text-black dark:text-white ${className}`}
     >
       <path
         fill="currentColor"
