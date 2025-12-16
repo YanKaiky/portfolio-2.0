@@ -45,6 +45,7 @@ const technologies = [
       "Docker",
       "AWS",
       "DigitalOcean",
+      "DNS",
       "CI/CD",
       "Git",
       "Linux",

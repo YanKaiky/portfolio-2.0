@@ -17,12 +17,12 @@
     "title": "Projects",
     "firstProject": "A sleek and modern landing page, perfect for establishments that don't yet have a website and want to highlight their culinary identity online.",
     "secondProject": "Automate your finances with AI assistance. FinanWe scans receipts, analyzes your spending, and sends you practical insights every month to help you spend smarter.",
-    "thirdProject": "GramHub revolutionizes the way you connect with your audience on Instagram, turning interactions into valuable business opportunities.",
+    "thirdProject": "Bora Negócios is a digital platform that connects users to regulated financial solutions, with complete security, transparency, and professional support.",
     "fourthProject": "An app where you find amazing images organized by themes, colors, and easy-to-use search filters."
   },
   "projectCard": {
-    "view": "Preview on web",
-    "gitHubView": "View on GitHub"
+    "view": "Website",
+    "gitHubView": "GitHub"
   },
   "stack": {
     "title": "Tech Stack"

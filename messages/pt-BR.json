@@ -17,12 +17,12 @@
     "title": "Projetos",
     "firstProject": "Uma landing page elegante e moderna, ideal para estabelecimentos que ainda não possuem um site e querem destacar sua identidade gastronômica na internet.",
     "secondProject": "Automatize suas finanças com ajuda da IA. O FinanWe escaneia recibos, analisa seus gastos e envia insights práticos todo mês para você gastar melhor.",
-    "thirdProject": "O GramHub revoluciona a forma como você se conecta com sua audiência no Instagram, transformando interações em oportunidades valiosas de negócio.",
+    "thirdProject": "Bora Negócios é uma plataforma digital que conecta os usuários a soluções financeiras reguladas, com total segurança, transparência e acompanhamento profissional.",
     "fourthProject": "Um aplicativo onde você encontra imagens incríveis organizadas por temas, cores e filtros de pesquisa fáceis de usar."
   },
   "projectCard": {
-    "view": "Preview na web",
-    "gitHubView": "Ver no GitHub"
+    "view": "Website",
+    "gitHubView": "GitHub"
   },
   "stack": {
     "title": "Tecnologias"

@@ -38,8 +38,12 @@ export const ProjectCard: FC<ProjectCardProps> = ({
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
       </div>
       <CardContent className="p-6 flex-grow">
-        <h3 className="font-bold text-2xl mb-2 group-hover:text-primary transition-colors">{title}</h3>
-        <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{description}</p>
+        <h3 className="font-bold text-2xl mb-2 group-hover:text-primary transition-colors">
+          {title}
+        </h3>
+        <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          {description}
+        </p>
         <div className="flex flex-wrap gap-2">
           {tags.map((tag) => (
             <span
@@ -63,7 +67,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2"
+                className="inline-flex items-center justify-center gap-2"
               >
                 <Globe className="w-4 h-4" />
                 {t("view")}
@@ -73,7 +77,11 @@ export const ProjectCard: FC<ProjectCardProps> = ({
               </Link>
             </Button>
           ) : (
-            <Button size="sm" disabled className="flex-1 opacity-50 cursor-not-allowed">
+            <Button
+              size="sm"
+              disabled
+              className="flex-1 opacity-50 cursor-not-allowed"
+            >
               <Globe className="w-4 h-4 mr-2" />
               {t("view")}
             </Button>
@@ -90,7 +98,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
                 href={github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2"
+                className="inline-flex items-center justify-center gap-2"
               >
                 <GitHub />
                 {t("gitHubView")}
