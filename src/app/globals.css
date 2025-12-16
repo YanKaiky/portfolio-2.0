@@ -4,14 +4,14 @@
 
 @layer base {
   :root {
-    --background: 0 0% 92%;
+    --background: 0 0% 98%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 142.1 76.2% 36.3%; /* Emerald 600 */
+    --primary-foreground: 355.7 100% 97.3%;
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
     --muted: 240 4.8% 95.9%;
@@ -22,7 +22,7 @@
     --destructive-foreground: 0 0% 98%;
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
-    --ring: 240 10% 3.9%;
+    --ring: 142.1 76.2% 36.3%;
     --radius: 0.5rem;
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
@@ -40,10 +40,10 @@
     --page-background: white;
 
     --scrollbar-track: transparent;
-    --scrollbar-thumb: #545454;
-    --scrollbar-thumb-hover: #5c5c5f;
+    --scrollbar-thumb: #a1a1aa;
+    --scrollbar-thumb-hover: #71717a;
 
-    --scrollbar-width: 12px;
+    --scrollbar-width: 8px;
   }
 
   .dark {
@@ -53,11 +53,11 @@
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
+    --primary: 142.1 70.6% 45.3%; /* Emerald 500 */
+    --primary-foreground: 144.9 80.4% 10%;
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
+    --muted: 240 4% 16%;
     --muted-foreground: 240 5% 64.9%;
     --accent: 240 3.7% 15.9%;
     --accent-foreground: 0 0% 98%;
@@ -65,7 +65,7 @@
     --destructive-foreground: 0 0% 98%;
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --ring: 142.4 71.8% 29.2%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
@@ -84,11 +84,11 @@
 
 @layer utilities {
   .bg-container-gradient {
-    @apply bg-gradient-to-br from-[#11998e] via-[#16bd90] to-[#38ef7d];
+    @apply bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500;
   }
 
   .bg-container-gradient-light {
-    @apply bg-gradient-to-br from-[#38ef7d] via-[#16bd90] to-[#11998e];
+    @apply bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400;
   }
 
   .text-gradient {
@@ -96,27 +96,27 @@
   }
 
   .text-green-light {
-    @apply text-[#38ef7d];
+    @apply text-emerald-400;
   }
 
   .text-green-dark {
-    @apply text-[#16bd90];
+    @apply text-emerald-500;
   }
 
   .bg-green-light {
-    @apply bg-[#38ef7d];
+    @apply bg-emerald-400;
   }
 
   .bg-green-dark {
-    @apply bg-[#16bd90];
+    @apply bg-emerald-500;
   }
 
   .bg-green-dark-hover {
-    @apply bg-[#16bd90]/20;
+    @apply bg-emerald-500/20;
   }
 
   .border-green-dark {
-    @apply border-[#16bd90] border-2;
+    @apply border-emerald-500 border-2;
   }
 
   .container-title {
@@ -138,7 +138,7 @@
 }
 
 body {
-  @apply bg-background text-foreground;
+  @apply bg-background text-foreground overflow-x-hidden;
   color: var(--foreground);
   background: var(--background);
 }
