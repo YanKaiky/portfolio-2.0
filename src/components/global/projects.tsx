@@ -9,49 +9,32 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: "Bistro Café",
+      title: "WideWebs",
       description: t("firstProject"),
-      image: "/bistro-café.png",
-      link: "https://menuplacerestaurant.netlify.app",
-      github: "https://github.com/YanKaiky/restaurant-website",
-      tags: ["React.js", "Motion", "TailwindCSS", "NPM"],
+      image: "/widewebs.png",
+      link: "https://widewebs.com.br",
+      tags: ["React.js", "TailwindCSS", "Motion", "Vite"],
     },
     {
-      title: "Finanwe (SaaS)",
+      title: "Corretei",
       description: t("secondProject"),
-      image: "/finanwe.png",
-      link: "https://finanwe.vercel.app",
-      github: "https://github.com/YanKaiky/finanwe",
-      tags: [
-        "NextJS 15",
-        "Tailwind 4",
-        "Gemini AI",
-        "Clerk",
-        "Arject",
-        "Clouflare R2",
-        "Prisma ORM",
-        "Recharts",
-      ],
+      image: "/corretei.png",
+      link: "https://corretei.net/",
+      tags: ["React Native", "Supabase", "Docker", "AI Nativa"],
     },
     {
       title: "Bora Negócios",
       description: t("thirdProject"),
       image: "/boranegocios.png",
       link: "https://boranegocios.com.br",
-      tags: [
-        "Flutter",
-        "NestJS",
-        "Prisma ORM",
-        "Postgres",
-        "Bun",
-      ],
+      tags: ["Flutter", "NestJS", "Prisma ORM", "Postgres", "Bun"],
     },
     {
-      title: "Wallart",
+      title: "Bistro Café",
       description: t("fourthProject"),
-      image: "/wallart.png",
-      github: "https://github.com/YanKaiky/wallart",
-      tags: ["Expo", "React Native", "Yarn"],
+      image: "/bistro-café.png",
+      link: "https://menuplacerestaurant.netlify.app",
+      tags: ["React.js", "Motion", "TailwindCSS", "NPM"],
     },
   ];
 
@@ -84,7 +67,6 @@ export const Projects = () => {
                 description={project.description}
                 image={project.image}
                 link={project.link}
-                github={project.github}
                 tags={project.tags}
               />
             </motion.div>

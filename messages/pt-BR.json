@@ -15,10 +15,10 @@
   },
   "projects": {
     "title": "Projetos",
-    "firstProject": "Uma landing page elegante e moderna, ideal para estabelecimentos que ainda não possuem um site e querem destacar sua identidade gastronômica na internet.",
-    "secondProject": "Automatize suas finanças com ajuda da IA. O FinanWe escaneia recibos, analisa seus gastos e envia insights práticos todo mês para você gastar melhor.",
+    "firstProject": "Transforme suas ideias em produtos digitais de alta performance. A WideWebs é uma agência especializada no desenvolvimento de sites, SaaS, MicroSaaS e design inovador.",
+    "secondProject": "O caminho mais rápido para vender ou alugar o seu imóvel. Você cadastra o imóvel e, na hora, é conectado com as imobiliárias da sua região.",
     "thirdProject": "Bora Negócios é uma plataforma digital que conecta os usuários a soluções financeiras reguladas, com total segurança, transparência e acompanhamento profissional.",
-    "fourthProject": "Um aplicativo onde você encontra imagens incríveis organizadas por temas, cores e filtros de pesquisa fáceis de usar."
+    "fourthProject": "Uma landing page elegante e moderna, ideal para estabelecimentos que ainda não possuem um site e querem destacar sua identidade gastronômica na internet."
   },
   "projectCard": {
     "view": "Website",
