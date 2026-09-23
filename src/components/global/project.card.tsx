@@ -1,5 +1,4 @@
 import { Button, Card, CardContent, CardFooter } from "@/components";
-import { GitHub } from "@/icons";
 import { Globe } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -10,7 +9,6 @@ interface ProjectCardProps {
   title: string;
   description: string;
   image: string;
-  github?: string;
   link?: string;
   tags?: string[];
 }
@@ -19,7 +17,6 @@ export const ProjectCard: FC<ProjectCardProps> = ({
   title,
   description,
   image,
-  github,
   link,
   tags = [],
 }) => {
@@ -84,35 +81,6 @@ export const ProjectCard: FC<ProjectCardProps> = ({
             >
               <Globe className="w-4 h-4 mr-2" />
               {t("view")}
-            </Button>
-          )}
-
-          {github ? (
-            <Button
-              asChild
-              variant="outline"
-              size="sm"
-              className="flex-1 border-emerald-500/30 hover:border-emerald-500 hover:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 transition-all duration-300"
-            >
-              <Link
-                href={github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2"
-              >
-                <GitHub />
-                {t("gitHubView")}
-              </Link>
-            </Button>
-          ) : (
-            <Button
-              variant="outline"
-              size="sm"
-              disabled
-              className="flex-1 opacity-50 cursor-not-allowed border-emerald-500/30"
-            >
-              <GitHub className="mr-2" />
-              {t("gitHubView")}
             </Button>
           )}
         </div>

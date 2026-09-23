@@ -15,10 +15,10 @@
   },
   "projects": {
     "title": "Projects",
-    "firstProject": "A sleek and modern landing page, perfect for establishments that don't yet have a website and want to highlight their culinary identity online.",
-    "secondProject": "Automate your finances with AI assistance. FinanWe scans receipts, analyzes your spending, and sends you practical insights every month to help you spend smarter.",
+    "firstProject": "Transform your ideas into high-performance digital products. WideWebs is an agency specialized in developing websites, SaaS, MicroSaaS, and innovative design.",
+    "secondProject": "The fastest way to sell or rent your property. You register the property and instantly connect with real estate agencies in your region.",
     "thirdProject": "Bora Negócios is a digital platform that connects users to regulated financial solutions, with complete security, transparency, and professional support.",
-    "fourthProject": "An app where you find amazing images organized by themes, colors, and easy-to-use search filters."
+    "fourthProject": "A sleek and modern landing page, perfect for establishments that don't yet have a website and want to highlight their culinary identity online."
   },
   "projectCard": {
     "view": "Website",

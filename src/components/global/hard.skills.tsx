@@ -1,5 +1,5 @@
 import { Card } from "@/components";
-import { Backend, DevOps, Frontend, Mobile, Tools } from "@/icons";
+import { Backend, DevOps, Frontend, Mobile } from "@/icons";
 import { motion } from "framer-motion";
 
 const technologies = [
@@ -51,26 +51,6 @@ const technologies = [
       "Linux",
       "Apache",
       "Nginx",
-    ],
-  },
-  {
-    category: "Tools",
-    icon: <Tools />,
-    skills: [
-      "VS Code",
-      "IntelliJ IDEA",
-      "Postman",
-      "Jest",
-      "GitHub",
-      "GitLab",
-      "BitBucket",
-      "Vercel",
-      "Netlify",
-      "Proxyman",
-      "Xcode",
-      "NPM",
-      "Yarn",
-      "Bun",
     ],
   },
 ];
