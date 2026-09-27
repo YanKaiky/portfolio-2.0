@@ -1,5 +1,5 @@
 import { SocialMediaButton } from "@/components";
-import { Email, GitHub, Instagram, LinkedIn, WhatsApp, X } from "@/icons";
+import { Email, GitHub, Instagram, LinkedIn, WhatsApp } from "@/icons";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { FC } from "react";
@@ -24,11 +24,6 @@ export const SocialMedias: FC<ISocialMediasProps> = ({ hero = false }) => {
       href: "https://wa.me/5547999556723?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços.",
       icon: <WhatsApp size={!hero ? "xs" : "sm"} />,
       label: "WhatsApp",
-    },
-    {
-      href: "https://x.com/yankaiky_",
-      icon: <X size={!hero ? "xs" : "sm"} />,
-      label: "X",
     },
     {
       href: "https://www.instagram.com/yan.kaiky_",
