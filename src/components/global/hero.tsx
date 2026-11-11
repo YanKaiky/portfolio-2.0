@@ -86,7 +86,7 @@ export const Hero = () => {
             </Button>
 
             <a
-              href="/CV.pdf"
+              href="/Yan Kaiky - Full-Stack Software Engineer - Currículo.pdf"
               download="Yan Kaiky - Full-Stack Software Engineer - Currículo.pdf"
               className="w-full sm:w-auto"
             >
