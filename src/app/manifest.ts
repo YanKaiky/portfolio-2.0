@@ -2,10 +2,10 @@ import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Yan Kaiky — Full Stack Developer",
+    name: "Yan Kaiky — Full Stack Engineer",
     short_name: "Yan Kaiky",
     description:
-      "Portfólio de Yan Kaiky, Full Stack Developer especializado em aplicações web, SaaS, APIs e soluções escaláveis.",
+      "Portfólio de Yan Kaiky, Full Stack Engineer especializado em aplicações web, SaaS, APIs e soluções escaláveis.",
     start_url: "/",
     display: "standalone",
     background_color: "#0A0A0A",

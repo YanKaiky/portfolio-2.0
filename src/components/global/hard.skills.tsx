@@ -22,8 +22,8 @@ const technologies = [
     icon: <Backend />,
     skills: [
       "Node.js",
-      "Express",
       "Nest.js",
+      "Golang",
       "Adonis.js",
       "PHP",
       "Java",

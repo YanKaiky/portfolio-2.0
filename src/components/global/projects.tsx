@@ -9,7 +9,7 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: "WideWebs",
+      title: "Wide Webs.",
       description: t("firstProject"),
       image: "/widewebs.png",
       link: "https://widewebs.com.br",

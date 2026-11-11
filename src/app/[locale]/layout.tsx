@@ -32,16 +32,16 @@ export async function generateMetadata({
 
   return {
     title: {
-      default: "Yan Kaiky — Full Stack Developer",
+      default: "Yan Kaiky — Full Stack Engineer",
       template: "%s | Yan Kaiky",
     },
     description:
-      "Yan Kaiky é Full Stack Developer especializado em aplicações web, SaaS, APIs e soluções escaláveis.",
+      "Yan Kaiky é Full Stack Engineer especializado em aplicações web, SaaS, APIs e soluções escaláveis.",
     creator: "Yan Kaiky",
     publisher: "Yan Kaiky",
     keywords: [
       "Yan Kaiky",
-      "Full Stack Developer",
+      "Full Stack Engineer",
       "Desenvolvedor Full Stack",
       "Software Developer",
       "Web Developer",
@@ -71,23 +71,23 @@ export async function generateMetadata({
       locale: locale,
       url: "https://yankaiky.dev",
       siteName: "Yan Kaiky",
-      title: "Yan Kaiky — Full Stack Developer",
+      title: "Yan Kaiky — Full Stack Engineer",
       description:
-        "Portfólio de Yan Kaiky, Full Stack Developer especializado em aplicações web, SaaS, APIs e soluções escaláveis.",
+        "Portfólio de Yan Kaiky, Full Stack Engineer especializado em aplicações web, SaaS, APIs e soluções escaláveis.",
       images: [
         {
           url: "/og-image.png",
           width: 800,
           height: 600,
-          alt: "Yan Kaiky — Full Stack Developer",
+          alt: "Yan Kaiky — Full Stack Engineer",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: "Yan Kaiky — Full Stack Developer",
+      title: "Yan Kaiky — Full Stack Engineer",
       description:
-        "Portfólio de Yan Kaiky, Full Stack Developer especializado em aplicações web, SaaS, APIs e soluções escaláveis.",
+        "Portfólio de Yan Kaiky, Full Stack Engineer especializado em aplicações web, SaaS, APIs e soluções escaláveis.",
       images: ["/og-image.png"],
     },
     robots: {
