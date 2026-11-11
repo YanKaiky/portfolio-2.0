@@ -48,7 +48,7 @@ export const Hero = () => {
               transition={{ duration: 0.6 }}
               className="text-2xl md:text-4xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 mb-8"
             >
-              Full Stack & Mobile Developer
+              Full Stack & Mobile Engineer
             </motion.h2>
 
             <motion.p
@@ -74,16 +74,22 @@ export const Hero = () => {
               size="lg"
               className="w-full sm:w-auto text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-emerald-500/25 group"
             >
-              <Link href="#contact" className="font-semibold flex items-center space-x-2">
+              <Link
+                href="#contact"
+                className="font-semibold flex items-center space-x-2"
+              >
                 <span>{t("contact")}</span>
                 <div className="group-hover:translate-x-1 transition-transform duration-300">
-                  <span className="sr-only">Go to contact</span>
-                  →
+                  <span className="sr-only">Go to contact</span>→
                 </div>
               </Link>
             </Button>
 
-            <a href="/CV.pdf" download="Yan Kaiky Augusto dos Santos.pdf" className="w-full sm:w-auto">
+            <a
+              href="/CV.pdf"
+              download="Yan Kaiky - Full-Stack Software Engineer - Currículo.pdf"
+              className="w-full sm:w-auto"
+            >
               <Button
                 variant="outline"
                 size="lg"
@@ -106,9 +112,17 @@ export const Hero = () => {
               className="hidden lg:block relative"
             >
               {/* Image Glow */}
-               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-teal-500/20 rounded-full blur-[80px] -z-10" />
-              <p className="text-xs text-muted-foreground mb-2 absolute -top-6 left-1/2 -translate-x-1/2 w-full">{t("developer")}</p>
-              <Image src="/developer.svg" alt="Hero" width={400} height={400} className="drop-shadow-2xl" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-teal-500/20 rounded-full blur-[80px] -z-10" />
+              <p className="text-xs text-muted-foreground mb-2 absolute -top-6 left-1/2 -translate-x-1/2 w-full">
+                {t("developer")}
+              </p>
+              <Image
+                src="/developer.svg"
+                alt="Hero"
+                width={400}
+                height={400}
+                className="drop-shadow-2xl"
+              />
             </motion.div>
           }
         />

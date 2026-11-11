@@ -20,7 +20,7 @@ const Page = () => {
             name: "Yan Kaiky",
             url: "https://yankaiky.dev",
             image: "https://yankaiky.dev/me.png",
-            jobTitle: "Full Stack Developer",
+            jobTitle: "Full Stack Engineer",
             sameAs: [
               "https://yankaiky.com",
               "https://yankaiky.com.br",
